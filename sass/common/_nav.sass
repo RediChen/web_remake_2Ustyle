@@ -1,0 +1,26 @@
+@import "../_var"
+nav
+    display: flex
+    #nav-link-wrap
+        width: 50%
+        display: inherit
+        list-style-type: none
+        li
+            width: 25%
+            height: 1.5rem
+            margin: auto 0
+            display: flex
+            justify-content: center
+            align-items: center
+        li:not(:last-child)
+            border-right: 1px solid $border-color
+        .nav-link
+            &:link, &:visited
+                color: $theme-color-1
+            &:hover
+                color: $theme-color-0
+#nav-tool
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    input
+        grid-column: 1 / span2

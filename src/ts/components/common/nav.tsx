@@ -1,6 +1,7 @@
 import Logo from "./logo";
 import { FC } from "react";
 import dataNav from "../../data/dataNav"
+import NavTool from "./navTool";
 // Part I : Logo --> imported
 //* Part II : NavLinks */
 interface ILinkProps {
@@ -36,6 +37,7 @@ const Nav = () => {
         <nav>
             <Logo />
             <NavLinks />
+            <NavTool />
         </nav>
     );
 }
