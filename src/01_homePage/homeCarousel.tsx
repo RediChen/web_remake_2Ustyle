@@ -1,5 +1,5 @@
 import React from "react";
-import img01 from "../../../assets/homeCarousel/carousel01.jpg";
+import img01 from "./images/carousel01.jpg";
 const HomeCarousel = () => {
     //todo 待 Carousel 元件製作完畢，再套用至此
     const shadow = {
