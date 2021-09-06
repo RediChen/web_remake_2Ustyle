@@ -1,28 +1,22 @@
-import Logo from "./logo";
+import Logo from "../components/common/logo";
 import { FC } from "react";
-import dataNav from "../../data/dataNav"
+import dataNav from "../data/dataNav"
 import NavTool from "./navTool";
+import { Link } from "react-router-dom";
 // Part I : Logo --> imported
 //* Part II : NavLinks */
-interface ILinkProps {
-    text: string,
-    href: string,
-    title: string
-}
-const Link: FC<ILinkProps> = (props) =>
-    <a href={props.href} title={props.text} className="nav-link">
-        {props.text}
-    </a>
 const NavLinks: FC = () => {
     const pack = [] as JSX.Element[];
     for (let i in dataNav) {
-        const address = "./";//todo
-
         pack.push(
             <li>
-                <Link href={address}
-                    text={dataNav[i]["titleZh"]}
-                    title={dataNav[i]["titleZh"] + " " + dataNav[i]["titleEn"]} />
+                <Link
+                    to={"/" + dataNav[i]["href"]}
+                    className="nav-link"
+                    title={dataNav[i]["titleZh"] + " " + dataNav[i]["titleEn"]}
+                >
+                    {dataNav[i]["titleZh"]}
+                </Link>
             </li>
         );
     }
@@ -35,7 +29,9 @@ const NavLinks: FC = () => {
 const Nav = () => {
     return (
         <nav>
-            <Logo />
+            <Link to="/">
+                <Logo />
+            </Link>
             <NavLinks />
             <NavTool />
         </nav>

@@ -7,10 +7,12 @@ const dataNav = [
     {
         titleZh: "植物",
         titleEn: "plants",
+        href: "plants",
     },
     {
         titleZh: "花器",
         titleEn: "flowerpots",
+        href: "flowerpots",
     },
     {
         titleZh: "配件",
@@ -21,6 +23,6 @@ const dataNav = [
     [index: string]: string | undefined;
     titleZh: string;
     titleEn: string;
-    href?: string;
+    href: string;
 }[];
 export default dataNav;

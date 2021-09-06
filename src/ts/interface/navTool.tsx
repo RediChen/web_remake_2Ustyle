@@ -1,6 +1,6 @@
 import React from "react";
-import LogInBtn from "./loginBtn"
-import CartBtn from "./cartBtn";
+import LogInBtn from "../components/common/loginBtn"
+import CartBtn from "../components/common/cartBtn";
 
 const NavTool = () => {
     const border = {

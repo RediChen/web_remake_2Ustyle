@@ -1,17 +1,11 @@
-import './css/style.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Nav from './ts/components/common/nav';
-import HomeCarousel from './ts/components/homePage/homeCarousel';
-const BigPicture = () =>
-<>
-  <Nav />
-  <HomeCarousel />
-</>
+import App from './app';
+import './css/style.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BigPicture />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
