@@ -1,3 +1,23 @@
-$theme-color-0: #9ac448
-$theme-color-1: #212e08
-$border-color: #ccc
+$color-theme-0: #f8fff2
+$color-theme-1: #9ac448
+$color-theme-2: #212e08
+$color-border-0: #cfd4c3
+$color-cart: #fe791c
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap")
+@mixin font-set($sz, $wt)
+    //wt of Noto Serif TC is in 200, 300, 500, 700, 900
+    font-weight: $wt
+    font-size: $sz
+@mixin rwdFor($mode)
+    @if $mode == "desktop"
+        @media screen and (min-width: 1025px)
+            @content
+    @else if $mode == "tablet"
+        @media screen and (max-width: 1024px)
+            @content
+    @else if $mode == "mobile"
+        @media screen and (max-width: 676px)
+            @content
+    @else
+        @error $mode + " 是不存在的裝置選項！"

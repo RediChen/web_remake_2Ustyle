@@ -1,5 +1,5 @@
 @import "./_var"
-@import "./common/nav"
+@import "../00_layout/sass/_nav"
 
 *
     margin: 0
@@ -11,6 +11,9 @@ a
         filter: invert(0.3)
 body
     padding: 0 9%
-    background: #f8fff2
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+    background: $color-theme-0
+    font-family: "Noto Serif TC", -apple-system, BlinkMacSystemFont,'palatino', serif
+.center
+    display: flex
+    align-items: center
+    justify-content: center

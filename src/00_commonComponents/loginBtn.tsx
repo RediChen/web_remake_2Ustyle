@@ -1,13 +1,12 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
-interface BtnProps {
-    style? : React.CSSProperties
-}
-const LogInBtn: FC<BtnProps> = ({style = {}}) => {
+const LogInBtn: FC = () => {
     return (
-        <Link className="login-btn" to="/login" style={style}>
-            會員登入
-        </Link>
+        <div className="login-btn">
+            <Link to="/login">
+                會員登入
+            </Link>
+        </div>
     );
 }
 export default LogInBtn;
