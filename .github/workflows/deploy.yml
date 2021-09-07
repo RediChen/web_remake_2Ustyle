@@ -35,6 +35,6 @@ jobs:
       - name: Build page
         run: npm run build
         
-      # 部署到 GitHub-pages，使用 package.json 的設定
+      # 部署到 GitHub-pages
       - name: Deploy pages
-        run: npm run deploy
+        run: gh-pages -d build
