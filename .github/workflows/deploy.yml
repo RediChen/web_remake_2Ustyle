@@ -4,7 +4,8 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,7 +17,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v2
       # 使用別人寫好的安裝 Action
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
@@ -27,10 +28,8 @@ jobs:
         run: npm install
         
       # 建置專案並部署到 GitHub-pages，別人寫好的 yml
-      - name: Build and Deploy on github-pages
-        uses: JamesIves/github-pages-deploy-action@main
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
-          BUILD_SCRIPT: cp .env.example .env.local && npm && npm build
+      - name: Build
+        run: npm run build
+      - name: Deploy to github-pages
+        run: npm run deploy
+        
