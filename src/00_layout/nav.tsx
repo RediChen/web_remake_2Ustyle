@@ -15,7 +15,7 @@ const NavLinks: FC = () => {
         </li>
     );
     return (
-        <ul id="nav-link-wrap">{pack}</ul>
+        <ul id="nav-link-wrap" className="row-ul">{pack}</ul>
     );
 }
 // Part III : NavTool --> imported

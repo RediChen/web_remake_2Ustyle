@@ -4,8 +4,12 @@ const HomePage = () => {
     return (
         <div>
             <HomeCarousel />
-            <h1>這裡是首頁～</h1>
-            <h2>沒有特別值得注意的。</h2>
+            <ul className="row-ul">
+                <li>盆栽新品</li>
+                <li>智慧澆水</li>
+                <li>無土植栽</li>
+                <li>臉書粉專</li>
+            </ul>
         </div>
     );
 }

@@ -16,8 +16,10 @@ const NavTool = () => {
     return (
         <div id="nav-tool">
             <SearchBar />
-            <LogInBtn />
-            <CartBtn />
+            <div className="row-ul">
+                <LogInBtn />
+                <CartBtn />
+            </div>
         </div>
     );
 }
