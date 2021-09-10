@@ -31,5 +31,5 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy to github-pages
-        run: npm run deploy
+        run: npm gh-pages -d build
         
