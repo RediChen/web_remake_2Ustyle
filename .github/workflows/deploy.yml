@@ -12,7 +12,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "set-up"
-  set-up:
+  set-up-and-build-to-deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -27,12 +27,6 @@ jobs:
       # 安裝 npm 套件
       - name: Install packages
         run: npm install
-        
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:        
-      - uses: actions/checkout@main
-      # 建置專案資料夾
         
       # 建置專案並部署到 GitHub-pages
       - name: Build and Deploy
