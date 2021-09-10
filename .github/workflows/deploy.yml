@@ -11,30 +11,34 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build-and-deploy"
-  build-and-deploy:
+  # This workflow contains a single job called "set-up"
+  set-up:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
+      - uses: actions/checkout@main
       # 使用別人寫好的安裝 Action
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.0
         with:
-          node-version: '>=14.17.1'
-
+          node-version: 14.x
       # 安裝 npm 套件
       - name: Install packages
         run: npm install
         
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:        
+      - uses: actions/checkout@main
       # 建置專案資料夾
-      - name: Build page
-        run: npm run build
         
-      # 部署到 GitHub-pages
-      - name: Deploy pages
-        run: gh-pages -d build
+      # 建置專案並部署到 GitHub-pages
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          BUILD_SCRIPT: cp .env.example .env.local && npm && npm build
