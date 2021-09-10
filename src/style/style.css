@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 nav {
@@ -19,20 +21,16 @@ nav {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  list-style-type: none;
 }
 
 #nav-link-wrap li {
   width: 6rem;
-  height: 1.5rem;
+  height: 1rem;
   margin: auto 0;
 }
 
-#nav-link-wrap li:not(:last-child) {
-  border-right: 1px solid #cfd4c3;
-}
-
 #nav-link-wrap .nav-link {
+  height: 1.5rem;
   -webkit-transition: color .4s;
   transition: color .4s;
 }
@@ -48,16 +46,17 @@ nav {
 #nav-tool {
   padding: 1rem 0;
   width: 11rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #nav-tool form {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
+  margin-bottom: 0.8rem;
   border: 1px solid #cfd4c3;
   border-radius: 1px;
 }
@@ -67,21 +66,35 @@ nav {
   border: none;
 }
 
+#nav-tool form input {
+  color: #aaa;
+}
+
+#nav-tool > div {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav-tool > div > * {
+  width: 50%;
+}
+
 #nav-tool .login-btn {
+  height: 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
 #nav-tool .login-btn a {
-  width: 100%;
-  border-right: 1px solid #cfd4c3;
+  text-align: center;
   -webkit-transition: -webkit-filter 0.4s;
   transition: -webkit-filter 0.4s;
   transition: filter 0.4s;
@@ -97,7 +110,17 @@ nav {
           filter: brightness(1.07);
 }
 
+#nav-tool .cart-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 #nav-tool .cart-btn a {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,7 +138,138 @@ nav {
 
 #nav-tool .cart-btn a img {
   width: 1.5rem;
+  margin-right: 0.25rem;
+}
+
+#footer-info-box {
+  border-top: 1px solid #cfd4c3;
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer-info-box ul li {
+  padding: 0 1rem;
+}
+
+#footer-info-box ul li, #footer-info-box ul li > * {
+  color: #555;
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+#footer-copyright {
+  margin-top: 2rem;
+  width: 100vw;
+  margin-left: -9vw;
+  background-color: #ddd;
+  text-align: center;
+  line-height: 4;
+}
+
+#footer-copyright a {
+  border: 1px solid transparent;
+  -webkit-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+}
+
+#footer-copyright a:link, #footer-copyright a:visited {
+  color: initial;
+}
+
+#footer-copyright a:hover {
+  border-color: #9ac448;
+}
+
+#home-nav {
+  width: 100%;
+  margin: 2rem 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#home-contact-box {
+  margin: 5rem 0;
+}
+
+#home-contact-box h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #9ac448;
+}
+
+#home-contact-box > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-contact-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-contact-card img {
   margin-right: 1rem;
+}
+
+.home-contact-card div > *:last-child {
+  color: #9ac448;
+}
+
+#disclaimer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#disclaimer header {
+  background-color: #eee;
+  width: 13rem;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+
+#disclaimer header div {
+  position: fixed;
+}
+
+#disclaimer header h2, #disclaimer header h3 {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+#disclaimer header h2 {
+  color: #aaa;
+}
+
+#disclaimer section > * {
+  margin-bottom: 1rem;
+}
+
+#disclaimer section > *:not(h1) {
+  color: #555;
+}
+
+#disclaimer section ul {
+  font-size: 0.9rem;
+}
+
+#disclaimer section ul li {
+  margin-bottom: 1rem;
 }
 
 * {
@@ -129,14 +283,23 @@ a {
   text-decoration: none;
 }
 
+a:link, a:visited {
+  color: initial;
+}
+
 a:active {
   -webkit-filter: invert(0.3);
           filter: invert(0.3);
 }
 
+ul {
+  list-style: none;
+}
+
 body {
-  padding: 0 9%;
-  background: #f8fff2;
+  padding: 0 9vw;
+  background: #fdfff7;
+  color: #212e08;
   font-family: "Noto Serif TC", -apple-system, BlinkMacSystemFont,'palatino', serif;
 }
 
@@ -150,4 +313,38 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.arrow {
+  padding: 3px;
+  margin-right: 1rem;
+  display: inline-block;
+  border: solid #9ac448;
+  border-width: 0 3px 3px 0;
+}
+
+.right {
+  -webkit-transform: rotate(-45deg) translateY(-1px);
+          transform: rotate(-45deg) translateY(-1px);
+}
+
+.breadcrumb {
+  /* span--> (小箭頭 + 子標籤) */
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #cfd4c3;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span:last-child {
+  color: #fe791c;
+}
+
+.row-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row-ul li:not(:last-child), .row-ul div:not(:last-child) {
+  border-right: 1px solid #cfd4c3;
 }
