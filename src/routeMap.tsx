@@ -1,5 +1,7 @@
 import { FC } from 'react';
-import { Route } from 'react-router-dom';
+import {
+    Route, Redirect, Switch
+} from 'react-router-dom';
 import dataNav from './00_layout/data/dataNav';
 import HomePage from './01_homePage/HomePage';
 import Login from './02_login/login';
@@ -10,7 +12,6 @@ import Plant from './12_plants/plant';
 import Flower from './13_flowerpots/flowerpots';
 import GardeningTool from './14_gardeningTools/gardening';
 
-//todo 需要將 gh-pages 的預設網址重新導向這裡的預設（不帶專案名稱）
 //* 路由 map */
 const mapOfRoutes = [
     {
@@ -51,17 +52,21 @@ const mapOfRoutes = [
     component: FC,
     exact: boolean
 }[];
-const RouteMap = <>
-    {
-        mapOfRoutes.map((route) =>
-            <Route
-                key={route.path}
-                path={route.path}
-                exact={route.exact}
-            >
-                <route.component />
-            </Route>
-        )
-    }
-</>
+const RouteMap = () =>
+    <Switch>
+        {
+            mapOfRoutes.map((route) =>
+                <Route
+                    key={route.path}
+                    path={route.path}
+                    exact={route.exact}
+                >
+                    <route.component />
+                </Route>
+            )
+        }
+        <Route path="*">
+            <Redirect to="/" />
+        </Route>
+    </Switch>
 export default RouteMap;
