@@ -1,4 +1,7 @@
 import HomeCarousel from "./homeCarousel";
+import iconMail from "./images/iconMail.png";
+import iconPhone from "./images/iconPhone.png";
+import iconClock from "./images/iconClock.png";
 
 const HomePage = () => {
     return (
@@ -26,21 +29,21 @@ const HomePage = () => {
                 <h1>需要協助訂購嗎？</h1>
                 <div>
                     <div className="home-contact-card">
-                        <img src="" alt="(信)" />
+                        <img src={iconMail} alt="(信封)" />
                         <div>
                             <h2>寫email給我們</h2>
                             <a href="mailto:service@2ustyle.com">service@2ustyle.com</a>
                         </div>
                     </div>
                     <div className="home-contact-card">
-                        <img src="" alt="(筒)" />
+                        <img src={iconPhone} alt="(話筒)" />
                         <div>
                             <h2>撥電話給我們</h2>
                             <a href="tel:02-2791-2816">02-2791-2816</a>
                         </div>
                     </div>
                     <div className="home-contact-card">
-                        <img src="" alt="(鐘)" />
+                        <img src={iconClock} alt="(時鐘)" />
                         <div>
                             <h2>電話服務時間</h2>
                             <span>10:00~13:00、14:00~17:00</span>
