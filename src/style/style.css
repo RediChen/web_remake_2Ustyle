@@ -292,20 +292,79 @@ note: 須留意有些介面及使在移動裝置
   color: #9ac448;
 }
 
+/*
+note: 16px 的 base size 是常用的初始數值
+idea: 以 md 之下的區間為 16 px
+每 40px 將基本 fz 縮小一個 px。直到 12px。
+    而在 md 之上則是換成 18px
+
+note: 須留意有些介面及使在移動裝置
+也必須確保 fz=16px e.g. input
+*/
 #disclaimer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+@media screen and (min-width: 992px) {
+  #disclaimer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  #disclaimer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #disclaimer header {
   background-color: #eee;
-  width: 13rem;
   margin-right: 1rem;
 }
 
-#disclaimer header div {
-  position: fixed;
+@media screen and (min-width: 992px) {
+  #disclaimer header {
+    height: auto;
+    width: 13rem;
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  #disclaimer header {
+    height: 5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #disclaimer header div {
+    position: fixed;
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  #disclaimer header div {
+    position: relative;
+    width: 14rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 #disclaimer header h2, #disclaimer header h3 {
@@ -316,6 +375,10 @@ note: 須留意有些介面及使在移動裝置
 
 #disclaimer header h2 {
   color: #aaa;
+}
+
+#disclaimer section {
+  min-height: 70vh;
 }
 
 #disclaimer section > * {
@@ -332,6 +395,9 @@ note: 須留意有些介面及使在移動裝置
 
 #disclaimer section ul li {
   margin-bottom: 1rem;
+  margin-left: 1.8rem;
+  text-indent: -1.6rem;
+  line-height: 2;
 }
 
 .center {

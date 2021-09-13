@@ -1,11 +1,29 @@
+@import "../style/_rwd"
 #disclaimer
     display: flex
+    @include rwd-for($from: lg)
+        flex-direction: row
+    @include rwd-for($to: lg)
+        flex-direction: column
     header
         background-color: #eee
-        width: 13rem
         margin-right: 1rem
+        @include rwd-for($from: lg)
+            height: auto
+            width: 13rem
+        @include rwd-for($to: lg)
+            height: 5rem
+            width: 100%
+            margin-bottom: 1rem
         div
-            position: fixed
+            @include rwd-for($from: lg)
+                position: fixed
+            @include rwd-for($to: lg)
+                position: relative
+                width: 14rem
+                display: flex
+                flex-direction: row-reverse
+                justify-content: space-around
         h2, h3
             text-align: center
             font-size: 1rem
@@ -13,11 +31,16 @@
         h2
             color: $color-gray-0
     section
+        min-height: 70vh
         & > *
             margin-bottom: 1rem
         & > *:not(h1)
             color: $color-gray-1
         ul
-            font-size: 0.9rem
+            $fz: 0.9rem
+            font-size: $fz
             li
                 margin-bottom: 1rem
+                margin-left: 2*$fz
+                text-indent: -1.6rem
+                line-height: 2
