@@ -5,15 +5,13 @@
     border-top: 1px solid $color-border-0
     padding-top: 2rem
     display: flex
+    justify-content: space-between
     @include rwd-for($from: lg)
         flex-direction: row
-        justify-content: space-between
     @include rwd-for($to: lg)
         flex-direction: column
         align-items: center
-        justify-content: space-between
         height: 10rem
-
     
     ul li
         padding: 0 1rem

@@ -13,10 +13,18 @@
     & > div
         display: flex
         margin: 0 auto
+        // align-items: center
         justify-content: space-between
+        @include rwd-for($from: lg)
+            flex-direction: row
+        @include rwd-for($to: lg)
+            flex-direction: column
+            width: 300px
 .home-contact-card
     display: flex
     align-items: center
+    @include rwd-for($to: lg)
+        margin: 1rem 0
     img
         margin-right: 1rem
     div > *:last-child
