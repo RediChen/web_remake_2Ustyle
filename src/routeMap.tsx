@@ -52,19 +52,19 @@ const mapOfRoutes = [
     component: FC,
     exact: boolean
 }[];
-const RouteMap = () =>
+const routePack = mapOfRoutes.map(
+    (route) =>
+        <Route
+            key={route.path}
+            path={route.path}
+            exact={route.exact}
+        >
+            <route.component />
+        </Route>
+);
+const RouteMap =
     <Switch>
-        {
-            mapOfRoutes.map((route) =>
-                <Route
-                    key={route.path}
-                    path={route.path}
-                    exact={route.exact}
-                >
-                    <route.component />
-                </Route>
-            )
-        }
+        {routePack}
         <Route path="*">
             <Redirect to="/" />
         </Route>
