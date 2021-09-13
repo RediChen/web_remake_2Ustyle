@@ -1,7 +1,36 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: initial;
+}
+
+a:active {
+  -webkit-filter: invert(0.3);
+          filter: invert(0.3);
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  padding: 0 9vw;
+  background: #fdfff7;
+  color: #212e08;
+  font-family: "Noto Serif TC", -apple-system, BlinkMacSystemFont,'palatino', serif;
+}
+
 nav {
   padding: 1rem 0;
   display: -webkit-box;
@@ -141,15 +170,49 @@ nav {
   margin-right: 0.25rem;
 }
 
+/*
+note: 16px 的 base size 是常用的初始數值
+idea: 以 md 之下的區間為 16 px
+每 40px 將基本 fz 縮小一個 px。直到 12px。
+    而在 md 之上則是換成 18px
+
+note: 須留意有些介面及使在移動裝置
+也必須確保 fz=16px e.g. input
+*/
 #footer-info-box {
   border-top: 1px solid #cfd4c3;
   padding-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+@media screen and (min-width: 992px) {
+  #footer-info-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  #footer-info-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 10rem;
+  }
 }
 
 #footer-info-box ul li {
@@ -269,37 +332,6 @@ nav {
 
 #disclaimer section ul li {
   margin-bottom: 1rem;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:link, a:visited {
-  color: initial;
-}
-
-a:active {
-  -webkit-filter: invert(0.3);
-          filter: invert(0.3);
-}
-
-ul {
-  list-style: none;
-}
-
-body {
-  padding: 0 9vw;
-  background: #fdfff7;
-  color: #212e08;
-  font-family: "Noto Serif TC", -apple-system, BlinkMacSystemFont,'palatino', serif;
 }
 
 .center {
