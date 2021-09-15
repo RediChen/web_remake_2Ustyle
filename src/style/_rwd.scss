@@ -2,9 +2,12 @@
 // Reference: Boostrap
 $breakpoints: (
     //name 區間名稱: minimum width 區間的下界
-    xs: 0,
+    xxs: 0,
+    xs: 380px,
     sm: 576px,
+    //========= tablet
     md: 768px,
+    //========= desktop
     lg: 992px,
     xl: 1280px,
     xxl: 1536px
