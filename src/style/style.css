@@ -20,15 +20,13 @@ a:active {
           filter: invert(0.3);
 }
 
-ul {
-  list-style: none;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-body {
-  padding: 0 9vw;
-  background: #fdfff7;
-  color: #212e08;
-  font-family: "Noto Serif TC", -apple-system, BlinkMacSystemFont,'palatino', serif;
+ul {
+  list-style: none;
 }
 
 nav {
@@ -190,7 +188,7 @@ note: 須留意有些介面及使在移動裝置
           justify-content: space-between;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   #footer-info-box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -199,7 +197,7 @@ note: 須留意有些介面及使在移動裝置
   }
 }
 
-@media screen and (max-width: 1279.98px) {
+@media screen and (max-width: 991.98px) {
   #footer-info-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -208,7 +206,23 @@ note: 須留意有些介面及使在移動裝置
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 10rem;
+  }
+  #footer-info-box > ul {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  #footer-info-box > ul:first-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #footer-info-box > ul:first-child > li:first-child {
+    text-align: center;
+    border: none;
+    margin-bottom: 1rem;
   }
 }
 
@@ -225,20 +239,27 @@ note: 須留意有些介面及使在移動裝置
 #footer-copyright {
   margin-top: 2rem;
   width: 100vw;
-  margin-left: -9vw;
   background-color: #ddd;
   text-align: center;
   line-height: 4;
+}
+
+@media screen and (min-width: 768px) {
+  #footer-copyright {
+    margin-left: -9vw;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #footer-copyright {
+    font-size: 1rem;
+  }
 }
 
 #footer-copyright a {
   border: 1px solid transparent;
   -webkit-transition: border-color 0.5s;
   transition: border-color 0.5s;
-}
-
-#footer-copyright a:link, #footer-copyright a:visited {
-  color: initial;
 }
 
 #footer-copyright a:hover {
@@ -420,6 +441,18 @@ note: 須留意有些介面及使在移動裝置
   margin-left: 1.8rem;
   text-indent: -1.6rem;
   line-height: 2;
+}
+
+body {
+  background: #fdfff7;
+  color: #212e08;
+  font-family: "Noto Serif TC", -apple-system, BlinkMacSystemFont,'palatino', serif;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0 9vw;
+  }
 }
 
 .center {
