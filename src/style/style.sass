@@ -6,6 +6,13 @@
 @import "../01_homePage/sass/_homePage"
 @import "../04_disclaimer/_disclaimer"
 
+body
+    @include rwd-for($from: md)
+        padding: 0 9vw
+    background: $color-theme-0
+    color: $color-theme-2
+    font-family: "Noto Serif TC", -apple-system, BlinkMacSystemFont,'palatino', serif
+
 .center
     display: flex
     align-items: center
