@@ -5,8 +5,10 @@ const Footer = () =>
         <div id="footer-info-box">
             <ul className="row-ul">
                 <li>購物說明</li>
-                <li>聯絡&nbsp;2Ustyle</li>
-                <li><a href="tel:02-2791-2816">02-2791-2816</a></li>
+                <ul className="row-ul">
+                    <li>聯絡&nbsp;2Ustyle</li>
+                    <li><a href="tel:02-2791-2816">02-2791-2816</a></li>
+                </ul>
             </ul>
             <ul className="row-ul">
                 <li>網站使用條款</li>

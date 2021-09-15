@@ -2,17 +2,25 @@
 @import "../../style/_rwd"
 
 #footer-info-box
+    //已套用 .row-ul
     border-top: 1px solid $color-border-0
     padding-top: 2rem
     display: flex
     justify-content: space-between
-    @include rwd-for($from: lg)
+    @include rwd-for($from: md)
         flex-direction: row
-    @include rwd-for($to: lg)
+    @include rwd-for($to: md)
         flex-direction: column
         align-items: center
-        height: 10rem
-    
+        & > ul
+            margin-top: 1rem
+    @include rwd-for($to: xs)
+        & > ul:first-child
+            flex-direction: column
+            & > li:first-child
+                text-align: center
+                border: none
+                margin-bottom: 1rem
     ul li
         padding: 0 1rem
         &, & > *
@@ -22,14 +30,15 @@
 #footer-copyright
     margin-top: 2rem
     width: 100vw
-    margin-left: -9vw
+    @include rwd-for($from: md)
+        margin-left: -9vw
+    @include rwd-for($to: md)
+        font-size: 1rem
     background-color: #ddd
     text-align: center
     line-height: 4
     a
         border: 1px solid transparent
         transition: border-color 0.5s
-        &:link, &:visited
-            color: initial
         &:hover
             border-color: $color-theme-1
