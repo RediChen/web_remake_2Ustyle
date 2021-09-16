@@ -20,7 +20,7 @@ const NavLinks: FC = () => {
 }
 // Part III : NavTool --> imported
 //* 最後組裝 */
-const Nav = () => {
+const Nav: FC = () => {
     return (
         <nav>
             <Link to="/">
