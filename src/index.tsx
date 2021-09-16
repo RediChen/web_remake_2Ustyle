@@ -1,19 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './00_layout/Layout';
-import {BrowserRouter as Router} from 'react-router-dom';
-import RouteMap from './routeMap';
+import LayoutBase from './00_layout/LayoutBase';
+import {
+  BrowserRouter as Router,
+  Switch
+} from 'react-router-dom';
 import './style/style.css';
+import { renderRoutes } from 'react-router-config';
+import routeConfig from './routeConfig';
 
 const basename = process.env.PUBLIC_URL;
 
 //* BigPicture
 const App = () =>
-    <Router basename={basename}>
-        <Layout>
-            {RouteMap}
-        </Layout>
-    </Router>
+  <Router basename={basename}>
+    <LayoutBase>
+      <Switch>
+        {renderRoutes(routeConfig)}
+      </Switch>
+    </LayoutBase>
+  </Router>
 
 ReactDOM.render(
   <React.StrictMode>

@@ -2,22 +2,22 @@ const dataNav = [
     {
         titleZh: "盆栽",
         titleEn: "potted plants",
-        href: "/combination-potted-plants"
+        href: "/product-category/combination-potted-plants"
     },
     {
         titleZh: "植物",
         titleEn: "plants",
-        href: "/plants",
+        href: "/product-category/plants",
     },
     {
         titleZh: "花器",
         titleEn: "flowerpots",
-        href: "/flowerpots",
+        href: "/product-category/flowerpots",
     },
     {
         titleZh: "配件",
         titleEn: "gardening tools",
-        href: "/gardening-tools",
+        href: "/product-category/gardening-tools",
     }
 ] as {
     [index: string]: string | undefined;
