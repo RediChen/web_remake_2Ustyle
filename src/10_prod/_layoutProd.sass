@@ -1,0 +1,23 @@
+@import '../style/_var'
+#layout-prod
+    display: flex
+    div:last-child
+        flex-grow: 1
+        margin-left: 2rem
+aside
+    width: 10rem
+    display: flex
+    flex-direction: column
+    & > *:not(:last-child)
+        border-bottom: 1px solid $color-border-0
+    h2
+        padding-bottom: 1rem
+    ul
+        margin: 1rem 0
+        padding-bottom: 1rem
+        li
+            line-height: 2
+#prod-list-1
+    color: $color-theme-1
+#prod-list-2
+    color: $color-cart

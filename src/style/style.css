@@ -443,8 +443,57 @@ note: 須留意有些介面及使在移動裝置
   line-height: 2;
 }
 
+#layout-prod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#layout-prod div:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 2rem;
+}
+
+aside {
+  width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+aside > *:not(:last-child) {
+  border-bottom: 1px solid #cfd4c3;
+}
+
+aside h2 {
+  padding-bottom: 1rem;
+}
+
+aside ul {
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+}
+
+aside ul li {
+  line-height: 2;
+}
+
+#prod-list-1 {
+  color: #9ac448;
+}
+
+#prod-list-2 {
+  color: #fe791c;
+}
+
 body {
-  background: #fdfff7;
+  background: #fffffb;
   color: #212e08;
   font-family: "Noto Serif TC", -apple-system, BlinkMacSystemFont,'palatino', serif;
 }
