@@ -1,10 +1,11 @@
 @import "../../style/_var"
 @import "../../style/_rwd"
-
+    
 #footer-info-box
     //已套用 .row-ul
-    border-top: 1px solid $color-border-0
+    margin: 0 9vw
     padding-top: 2rem
+    border-top: 1px solid $color-border-0
     display: flex
     justify-content: space-between
     @include rwd-for($from: md)
@@ -29,9 +30,7 @@
             
 #footer-copyright
     margin-top: 2rem
-    width: 100vw
-    @include rwd-for($from: md)
-        margin-left: -9vw
+    width: 100%
     @include rwd-for($to: md)
         font-size: 1rem
     background-color: #ddd
