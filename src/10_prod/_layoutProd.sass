@@ -1,13 +1,20 @@
 @import '../style/_var'
 #layout-prod
     display: flex
-    div:last-child
-        flex-grow: 1
-        margin-left: 2rem
+    @include rwd-for($from: lg)
+        div:last-child
+            flex-grow: 1
+            margin-left: 2rem
+    @include rwd-for($to: lg)
+        flex-direction: column-reverse
 aside
     width: 10rem
     display: flex
     flex-direction: column
+    @include rwd-for($to: lg)
+        width: 100%
+        align-items: center
+        text-align: center
     & > *:not(:last-child)
         border-bottom: 1px solid $color-border-0
     h2
