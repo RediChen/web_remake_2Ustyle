@@ -1,18 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap")
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;700;900&display=swap")
 @import "./_var"
 @import "./_reset"
 @import "../00_layout/sass/_nav"
 @import "../00_layout/sass/_footer"
+@import "../00_layout/sass/_infoBox"
 @import "../01_homePage/sass/_homePage"
 @import "../04_disclaimer/_disclaimer"
 @import "../10_prod/_layoutProd"
 
 body
-    @include rwd-for($from: md)
-        padding: 0 9vw
     background: $color-theme-0
     color: $color-theme-2
-    font-family: "Noto Serif TC", -apple-system, BlinkMacSystemFont,'palatino', serif
+    font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont,'palatino', serif
 
 .center
     display: flex
@@ -44,3 +43,13 @@ body
     li:not(:last-child),div:not(:last-child)
         border-right: 1px solid $color-border-0
 // 列清樣式 END
+//* Icon from font Awesome
+.font-awesome-solid
+    display: inline-block
+    font-style: normal
+    font-variant: normal
+    text-rendering: auto
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+// Icon from font Awesome END
+
