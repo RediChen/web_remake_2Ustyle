@@ -1,14 +1,11 @@
 import LogInBtn from "src/00_commonComponents/loginBtn";
 import CartBtn from "src/00_commonComponents/cartBtn";
-// import icon from "./images/magnifier.png";
 import { FC } from "react";
 const SearchBar: FC = () => {
     return (
         <form>
             <input type="text" placeholder="搜尋商品..." />
-            <button type="submit">
-                搜尋{/* <img src={icon} alt="搜尋" /> */}
-            </button>
+            <button type="submit"><i /></button>
         </form>
     );
 }

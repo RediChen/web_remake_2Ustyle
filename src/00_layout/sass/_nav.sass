@@ -1,5 +1,6 @@
 @import "../../style/_var"
 nav
+    margin: 0 9vw
     padding: 1rem 0
     display: flex
     justify-content: space-between
@@ -27,13 +28,24 @@ nav
     flex-direction: column
     form
         margin-bottom: 0.8rem
+        padding: 0.2rem
         border: 1px solid $color-border-0
         border-radius: 1px
+        display: flex
+        background-color: #fff
         input, button
             height: 100%
             border: none
+            background-color: transparent
         input
+            flex-grow: 1
             color: $color-gray-0
+        button
+            i::before
+                @extend .font-awesome-solid
+                content: "\f002"
+                font-size: 1rem
+                color: $color-gray-0
     & > div
         justify-content: space-between
         align-items: center

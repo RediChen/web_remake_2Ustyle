@@ -1,15 +1,43 @@
+#home-page
+    @include rwd-for($from: md)
+        margin: 0 9vw
+    @include rwd-for($to: md)
+        margin: auto
 #home-nav
     width: 100%
     margin: 2rem 0
     justify-content: space-around
     li
-        include font-set(1.2rem, 500)
+        width: 25%
+        color: $color-theme-1
+        @include rwd-for($from: md)
+            flex-direction: row
+            @include font-set(1.2rem, 500)
+        @include rwd-for($to: md)
+            flex-direction: column
+            @include font-set(0.8rem, 500)
+        i::before
+            @extend .font-awesome-solid
+            margin-right: 1rem
+            font-size: 1.5rem
+    li:nth-child(1) > i::before
+        content: "\f0a1"
+        transform: rotate(-10deg)
+    li:nth-child(2) > i::before
+        content: "\f043"
+    li:nth-child(3) > i::before
+        font-family: "Font Awesome 5 Brands"
+        content: "\f299"//f06c
+        transform: scaleX(-1)
+    li:nth-child(4) > i::before
+        content: "\f164"
 #home-contact-box
     margin: 5rem 0
     h1
         margin-bottom: 2rem
         text-align: center
         color: $color-theme-1
+        @include font-set(2rem, 700)
     & > div
         display: flex
         margin: 0 auto
@@ -20,6 +48,8 @@
         @include rwd-for($to: lg)
             flex-direction: column
             width: 300px
+        h2
+            @include font-set(1.2rem, 300)
 .home-contact-card
     display: flex
     align-items: center

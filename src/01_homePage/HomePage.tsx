@@ -5,24 +5,20 @@ import iconClock from "./images/iconClock.png";
 
 const HomePage = () => {
     return (
-        <div>
+        <section id="home-page">
             <HomeCarousel />
             <ul className="row-ul" id="home-nav">
                 <li className="center">
-                    <img src="" alt="(圖)" />
-                    盆栽新品
+                    <i /><span>盆栽新品</span>
                 </li>
                 <li className="center">
-                    <img src="" alt="(圖)" />
-                    智慧澆水
+                    <i /><span>智慧澆水</span>
                 </li>
                 <li className="center">
-                    <img src="" alt="(圖)" />
-                    無土植栽
+                    <i /><span>無土植栽</span>
                 </li>
                 <li className="center">
-                    <img src="" alt="(圖)" />
-                    臉書粉專
+                    <i /><span>臉書粉專</span>
                 </li>
             </ul>
             <div id="home-contact-box">
@@ -51,7 +47,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 export default HomePage;
