@@ -1,0 +1,31 @@
+#info-box
+    width: 100%
+    position: sticky
+    background-color: #3d9cd2
+    @include rwd-for($from: md)
+        display: flex
+        bottom: 0
+        p
+            flex-grow: 1
+    @include rwd-for($to: md)
+        display: block
+    p
+        padding: 1rem 1.5rem
+        color: #fff
+        i::before
+            @extend .font-awesome-solid
+            content: "\f05a"
+    a
+        color: #fff
+    button
+        background-color: #378cbd
+        padding: 1rem 1.5rem
+        border: none
+        color: #fff
+        font-size: 1rem        
+        i::before
+            @extend .font-awesome-solid
+            @include rwd-for($from: md)
+                content: "\f057"
+            @include rwd-for($to: md)
+                content: ""
