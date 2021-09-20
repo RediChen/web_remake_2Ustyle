@@ -1,13 +1,14 @@
 //=== RWD breakpoint param 斷點尺寸清單
+// p.s. 因為 sass 不支援 map 的斷行寫法，因此此檔採用 scss。
 // Reference: Boostrap
 $breakpoints: (
     //name 區間名稱: minimum width 區間的下界
     xxs: 0,
     xs: 380px,
     sm: 576px,
-    //========= tablet
+    //========= ┌→ tablet
     md: 768px,
-    //========= desktop
+    //========= ┌→ desktop
     lg: 992px,
     xl: 1280px,
     xxl: 1536px
@@ -42,7 +43,7 @@ $breakpoints: (
         @return null;
     } @else {
         $bound: map-get($breakpoints, $size-name) - 0.02px;
-        //因為 media queries 4 的不等號寫法尚未被支援
+        //因為 media queries 4 的不等號寫法尚未被普遍支援
         //在此採用的 walkaround 是將上界下扣 0.02px
         //原因有二：(1)縮小漏網的空隙 (2)Safari 的概算 bug
         @return $bound;
@@ -87,7 +88,7 @@ $breakpoints: (
 // API
 @mixin rwd-for($from: null, $to: null) {
     @if $from == null and $to == null {
-        @error "不可以沒有指定參數。";
+        @error "請使用 $from、$to 來指定裝置尺寸。";
     } @else if $to == null {
         @include rwd-up-from($from) {
             @content;
@@ -109,6 +110,6 @@ idea: 以 md 之下的區間為 16 px
 每 40px 將基本 fz 縮小一個 px。直到 12px。
     而在 md 之上則是換成 18px
 
-note: 須留意有些介面及使在移動裝置
+note: 須留意有些介面縱使在移動裝置
 也必須確保 fz=16px e.g. input
 */
