@@ -1,7 +1,15 @@
+@import './style/_rwd'
 *
     margin: 0
     padding: 0
     box-sizing: border-box
+html
+    @include rwd-for($from: lg)
+        font-size: 21px
+    @include rwd-for($from: md)
+        font-size: 18px
+    @include rwd-for($to: md)
+        font-size: 16px
 a
     text-decoration: none
     &:link, &:visited
