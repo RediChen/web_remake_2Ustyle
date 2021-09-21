@@ -17,7 +17,12 @@ const Footer = () =>
             </ul>
             <ul className="row-ul">
                 <li>網站維護</li>
-                <li>&copy; 2020 2Ustyle</li>
+                <li>
+                    <a href="https://www.2ustyle.com" target="_blank"
+                        title="2Ustyle官方網站" rel="noreferrer">
+                        &copy; 2020 2Ustyle
+                    </a>
+                </li>
             </ul>
         </div>
         <h3 id="footer-copyright">
