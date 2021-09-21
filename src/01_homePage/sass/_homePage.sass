@@ -55,7 +55,18 @@
     align-items: center
     @include rwd-for($to: lg)
         margin: 1rem 0
-    img
-        margin-right: 1rem
     div > *:last-child
         color: $color-theme-1
+    i
+        @extend .font-awesome-solid
+        margin-right: 1rem
+        font-size: 1.2rem
+        color: $color-gray-0
+    &:nth-child(1) > i::before
+        content: "\f0e0"
+    &:nth-child(2) > i::before
+        content: "\f879"
+    &:nth-child(3) > i::before
+        content: "\f017"
+
+        
