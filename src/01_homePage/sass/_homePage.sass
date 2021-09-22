@@ -6,20 +6,22 @@
 #home-nav
     width: 100%
     margin: 2rem 0
-    justify-content: space-around
     li
         width: 25%
         color: $color-theme-1
         @include rwd-for($from: md)
-            flex-direction: row
             @include font-set(1.2rem, 500)
+            flex-direction: row
         @include rwd-for($to: md)
-            flex-direction: column
             @include font-set(0.8rem, 500)
+            flex-direction: column
         i::before
             @extend .font-awesome-solid
-            margin-right: 1rem
             font-size: 1.5rem
+            @include rwd-for($from: md)
+                margin-right: 1rem
+            @include rwd-for($to: md)
+                margin-right: 0
     li:nth-child(1) > i::before
         content: "\f0a1"
         transform: rotate(-10deg)
@@ -27,7 +29,7 @@
         content: "\f043"
     li:nth-child(3) > i::before
         font-family: "Font Awesome 5 Brands"
-        content: "\f299"//f06c
+        content: "\f299"
         transform: scaleX(-1)
     li:nth-child(4) > i::before
         content: "\f164"
