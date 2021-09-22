@@ -2,17 +2,17 @@
     width: 100%
     position: sticky
     background-color: #3d9cd2
-    & > *
+    & *
         color: #fff
-
-    @include rwd-for($from: md)
-        display: flex
+    @include rwd-for($from: sm)
         bottom: 0
+        display: flex
         p
             flex-grow: 1
-    @include rwd-for($to: md)
-        display: block
+    @include rwd-for($to: sm)
         bottom: 10%
+        display: block
+
     p
         padding: 1rem 1.5rem
         i::before
@@ -24,7 +24,7 @@
         border: none
         font-size: 1rem
         cursor: pointer
-        @include rwd-for($to: md)
+        @include rwd-for($to: sm)
             position: relative
             left: 100%
             bottom: 0
