@@ -1,12 +1,43 @@
-import React from "react";
+import { FC } from "react";
 import img01 from "./images/carousel01.jpg";
-const HomeCarousel = () => {
-    //todo 待 Carousel 元件製作完畢，再套用至此
-    const shadow = {
-        boxShadow: "0 15px 10px -5px #999"
-    } as React.CSSProperties;
-    return (
-        <img src={img01} alt="上網買盆栽，安心宅配" style={shadow} />
-    );
-}
+import img02 from "./images/carousel02.jpg";
+import img03 from "./images/carousel03.jpg";
+import Carousel from "react-material-ui-carousel";
+import { Paper } from "@material-ui/core";
+
+const dataCarousel = [
+    {
+        imgSrc: img01,
+        imgAlt: "上網買盆栽，安心宅配"
+    },
+    {
+        imgSrc: img02,
+        imgAlt: "推薦室內盆栽"
+    },
+    {
+        imgSrc: img03,
+        imgAlt: "智慧澆水盆栽"
+    }
+];
+interface IProps {
+    imgSrc: string;
+    imgAlt: string;
+};
+const Item: FC<IProps> = (props) =>
+    /**
+     * param imgSrc: string
+     * param imgAlt: string
+     */
+    <Paper elevation={6}>
+        <img src={props.imgSrc} alt={props.imgAlt} />
+    </Paper>
+
+const HomeCarousel = () =>
+    <Carousel
+    autoPlay={false}
+    >
+        {dataCarousel.map((item, i) =>
+            <Item key={i} imgSrc={item.imgSrc} imgAlt={item.imgAlt} />
+        )}
+    </Carousel>
 export default HomeCarousel;
