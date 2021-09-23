@@ -33,9 +33,7 @@ const Item: FC<IProps> = (props) =>
     </Paper>
 
 const HomeCarousel = () =>
-    <Carousel
-    autoPlay={false}
-    >
+    <Carousel>
         {dataCarousel.map((item, i) =>
             <Item key={i} imgSrc={item.imgSrc} imgAlt={item.imgAlt} />
         )}
