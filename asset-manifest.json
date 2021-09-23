@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/WD_2Ustyle_remake2108/static/css/main.e9680046.chunk.css",
-    "main.js": "/WD_2Ustyle_remake2108/static/js/main.4c112df4.chunk.js",
-    "main.js.map": "/WD_2Ustyle_remake2108/static/js/main.4c112df4.chunk.js.map",
+    "main.js": "/WD_2Ustyle_remake2108/static/js/main.da6fe791.chunk.js",
+    "main.js.map": "/WD_2Ustyle_remake2108/static/js/main.da6fe791.chunk.js.map",
     "runtime-main.js": "/WD_2Ustyle_remake2108/static/js/runtime-main.448a97e9.js",
     "runtime-main.js.map": "/WD_2Ustyle_remake2108/static/js/runtime-main.448a97e9.js.map",
-    "static/js/2.40926ec4.chunk.js": "/WD_2Ustyle_remake2108/static/js/2.40926ec4.chunk.js",
-    "static/js/2.40926ec4.chunk.js.map": "/WD_2Ustyle_remake2108/static/js/2.40926ec4.chunk.js.map",
+    "static/js/2.c368d22d.chunk.js": "/WD_2Ustyle_remake2108/static/js/2.c368d22d.chunk.js",
+    "static/js/2.c368d22d.chunk.js.map": "/WD_2Ustyle_remake2108/static/js/2.c368d22d.chunk.js.map",
     "index.html": "/WD_2Ustyle_remake2108/index.html",
     "static/css/main.e9680046.chunk.css.map": "/WD_2Ustyle_remake2108/static/css/main.e9680046.chunk.css.map",
-    "static/js/2.40926ec4.chunk.js.LICENSE.txt": "/WD_2Ustyle_remake2108/static/js/2.40926ec4.chunk.js.LICENSE.txt",
+    "static/js/2.c368d22d.chunk.js.LICENSE.txt": "/WD_2Ustyle_remake2108/static/js/2.c368d22d.chunk.js.LICENSE.txt",
     "static/media/carousel01.2933ae78.jpg": "/WD_2Ustyle_remake2108/static/media/carousel01.2933ae78.jpg",
     "static/media/carousel02.1bbc5835.jpg": "/WD_2Ustyle_remake2108/static/media/carousel02.1bbc5835.jpg",
     "static/media/carousel03.c60f271b.jpg": "/WD_2Ustyle_remake2108/static/media/carousel03.c60f271b.jpg",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.448a97e9.js",
-    "static/js/2.40926ec4.chunk.js",
+    "static/js/2.c368d22d.chunk.js",
     "static/css/main.e9680046.chunk.css",
-    "static/js/main.4c112df4.chunk.js"
+    "static/js/main.da6fe791.chunk.js"
   ]
 }
