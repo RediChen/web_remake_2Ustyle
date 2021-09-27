@@ -12,6 +12,9 @@ note: 須留意有些介面縱使在移動裝置
 * {
   margin: 0;
   padding: 0;
+}
+
+*, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -209,6 +212,89 @@ nav {
 #nav-tool .cart-btn a img {
   width: 1.5rem;
   margin-right: 0.25rem;
+}
+
+.contact-box {
+  margin: 5rem 0;
+}
+
+.contact-box h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #9ac448;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.contact-box > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-box > div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  .contact-box > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+  }
+}
+
+.contact-box > div h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.home-contact-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .home-contact-card {
+    margin: 1rem 0;
+  }
+}
+
+.home-contact-card div > *:last-child {
+  color: #9ac448;
+}
+
+.home-contact-card i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.home-contact-card:nth-child(1) > i::before {
+  content: "\f0e0";
+}
+
+.home-contact-card:nth-child(2) > i::before {
+  content: "\f879";
+}
+
+.home-contact-card:nth-child(3) > i::before {
+  content: "\f017";
 }
 
 /*
@@ -457,89 +543,6 @@ note: 須留意有些介面縱使在移動裝置
   content: "\f164";
 }
 
-#home-contact-box {
-  margin: 5rem 0;
-}
-
-#home-contact-box h1 {
-  margin-bottom: 2rem;
-  text-align: center;
-  color: #9ac448;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-#home-contact-box > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media screen and (min-width: 992px) {
-  #home-contact-box > div {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media screen and (max-width: 1279.98px) {
-  #home-contact-box > div {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 300px;
-  }
-}
-
-#home-contact-box > div h2 {
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-.home-contact-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 1279.98px) {
-  .home-contact-card {
-    margin: 1rem 0;
-  }
-}
-
-.home-contact-card div > *:last-child {
-  color: #9ac448;
-}
-
-.home-contact-card i {
-  margin-right: 1rem;
-  font-size: 1.2rem;
-  color: #aaa;
-}
-
-.home-contact-card:nth-child(1) > i::before {
-  content: "\f0e0";
-}
-
-.home-contact-card:nth-child(2) > i::before {
-  content: "\f879";
-}
-
-.home-contact-card:nth-child(3) > i::before {
-  content: "\f017";
-}
-
 #home-page .Carousel-root-1 {
   overflow: visible;
 }
@@ -561,14 +564,15 @@ idea: 以 md 之下的區間為 16 px
 note: 須留意有些介面縱使在移動裝置
 也必須確保 fz=16px e.g. input
 */
-#disclaimer {
+.layout-single-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media screen and (min-width: 992px) {
-  #disclaimer {
+  .layout-single-page {
+    padding: 0 9vw;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -577,7 +581,8 @@ note: 須留意有些介面縱使在移動裝置
 }
 
 @media screen and (max-width: 1279.98px) {
-  #disclaimer {
+  .layout-single-page {
+    padding: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -585,20 +590,20 @@ note: 須留意有些介面縱使在移動裝置
   }
 }
 
-#disclaimer header {
+.layout-single-page header {
   background-color: #eee;
   margin-right: 1rem;
 }
 
 @media screen and (min-width: 992px) {
-  #disclaimer header {
+  .layout-single-page header {
     height: auto;
     width: 13rem;
   }
 }
 
 @media screen and (max-width: 1279.98px) {
-  #disclaimer header {
+  .layout-single-page header {
     height: 5rem;
     width: 100%;
     margin-bottom: 1rem;
@@ -606,13 +611,13 @@ note: 須留意有些介面縱使在移動裝置
 }
 
 @media screen and (min-width: 992px) {
-  #disclaimer header div {
+  .layout-single-page header div {
     position: fixed;
   }
 }
 
 @media screen and (max-width: 1279.98px) {
-  #disclaimer header div {
+  .layout-single-page header div {
     position: relative;
     width: 14rem;
     display: -webkit-box;
@@ -627,33 +632,33 @@ note: 須留意有些介面縱使在移動裝置
   }
 }
 
-#disclaimer header h2, #disclaimer header h3 {
+.layout-single-page header h2, .layout-single-page header h3 {
   text-align: center;
   font-size: 1rem;
   line-height: 2;
 }
 
-#disclaimer header h2 {
+.layout-single-page header h2 {
   color: #aaa;
 }
 
-#disclaimer section {
+.layout-single-page article {
   min-height: 70vh;
 }
 
-#disclaimer section > * {
+.layout-single-page article > * {
   margin-bottom: 1rem;
 }
 
-#disclaimer section > *:not(h1) {
+.layout-single-page article > *:not(h1) {
   color: #555;
 }
 
-#disclaimer section ul {
+.layout-single-page article ul {
   font-size: 0.9rem;
 }
 
-#disclaimer section ul li {
+.layout-single-page article ul li {
   margin-bottom: 1rem;
   margin-left: 1.8rem;
   text-indent: -1.6rem;
@@ -782,7 +787,7 @@ body {
   border-right: 1px solid #cfd4c3;
 }
 
-.font-awesome-solid, #nav-tool form button i::before, #info-box p i::before, #info-box button i::before, #home-nav li i::before, .home-contact-card i {
+.font-awesome-solid, #nav-tool form button i::before, .home-contact-card i, #info-box p i::before, #info-box button i::before, #home-nav li i::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
