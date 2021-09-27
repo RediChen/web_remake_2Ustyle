@@ -4,9 +4,13 @@ const Footer = () =>
     <footer>
         <div id="footer-info-box">
             <ul className="row-ul">
-                <li>購物說明</li>
+                <li>
+                    <Link to="/shopping-guide">購物說明</Link>
+                </li>
                 <ul className="row-ul">
-                    <li>聯絡&nbsp;2Ustyle</li>
+                    <li>
+                        <Link to="/about">關於&nbsp;2Ustyle</Link>
+                    </li>
                     <li><a href="tel:02-2791-2816">02-2791-2816</a></li>
                 </ul>
             </ul>
