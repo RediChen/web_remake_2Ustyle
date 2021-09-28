@@ -3,7 +3,7 @@
  */
 import { Redirect } from 'react-router-dom';
 import { RouteConfig } from 'react-router-config';
-import dataNav from './00_layout/data/dataNav';
+import dataNav from './00_layoutBase/data/dataNav';
 import HomePage from './01_homePage/HomePage';
 import Login from './02_account/020_login/login';
 import CartPage from './03_cart/cart';
@@ -12,9 +12,9 @@ import LayoutProd from './10_prod/LayoutProd';
 import Plant from './10_prod/12_plants/plant';
 import Flower from './10_prod/13_flowerpots/flowerpots';
 import GardeningTool from './10_prod/14_gardeningTools/gardening';
-import Disclaimer from './90_singlePage/95_disclaimer/disclaimer';
 import ShoppingGuide from './90_singlePage/91_shoppingGuide/shoppingGuide';
-import Contact from './90_singlePage/92_about/about';
+import About from './90_singlePage/92_about/about';
+import Disclaimer from './90_singlePage/95_disclaimer/disclaimer';
 
 const routeConfig: RouteConfig[] = [
     {
@@ -66,7 +66,7 @@ const routeConfig: RouteConfig[] = [
     },
     {
         path: '/about',
-        component: Contact,
+        component: About,
         breadcrumb: '關於 2Ustyle'
     },
     {

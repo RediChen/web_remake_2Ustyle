@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LayoutBase from './00_layout/LayoutBase';
+import LayoutBase from './00_layoutBase/LayoutBase';
 import {
   BrowserRouter as Router,
   Switch
