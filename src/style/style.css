@@ -97,7 +97,7 @@ nav {
   color: #212e08;
 }
 
-#nav-link-wrap .nav-link:hovernpm {
+#nav-link-wrap .nav-link:hover, #nav-link-wrap .nav-link-active {
   color: #9ac448;
 }
 
