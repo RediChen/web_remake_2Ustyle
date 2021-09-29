@@ -1,8 +1,13 @@
 import LayoutSinglePage from "../LayoutSinglePage";
-
-const Disclaimer = () => {
+import { RouteConfigComponentProps as IRCProps } from "react-router-config";
+import { FC } from "react";
+const Disclaimer: FC<IRCProps> = (props) => {
     return (
-        <LayoutSinglePage titleEn="Disclaimer" titleZh="免責聲明">
+        <LayoutSinglePage
+            titleEn="Disclaimer"
+            titleZh="免責聲明"
+            {...props}
+        >
             <article>
                 <h1>2Ustyle 風格圖悠網站免責聲明</h1>
                 <p>當您成為&nbsp;2Ustyle&nbsp;風格圖悠網站（以下簡稱「本網站」）的用戶，表示您已詳細閱讀及明確瞭解本『免責聲明』，並同意屬下列情況發生時本網站毋須負擔任何責任：</p>

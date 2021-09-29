@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
-import { Link } from "react-router-dom";
-interface ILayoutSingleProps {
+import Breadcrumbs from "src/00_commonComponents/breadcrumb/breadcrumb";
+import { RouteConfigComponentProps as IRCProps } from "react-router-config";
+interface ILayoutSingleProps extends IRCProps {
     titleEn: string;
     titleZh: string;
     children: ReactNode;
@@ -20,10 +21,7 @@ const LayoutSinglePage: FC<ILayoutSingleProps> = (props) =>
             </div>
         </header>
         <div>
-            <div className="breadcrumb">
-                <Link to="/">首頁</Link>
-                <span>&gt; 導覽尚未建立</span>
-            </div>
+            <Breadcrumbs location={props.location} />
             {props.children}
         </div>
     </div>

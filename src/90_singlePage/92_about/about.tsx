@@ -1,7 +1,14 @@
 import ContactBox from "src/00_commonComponents/contactBox";
 import LayoutSinglePage from "../LayoutSinglePage"
-const About = () =>
-    <LayoutSinglePage titleEn="About Us" titleZh="關於 2Ustyle">
+import { RouteConfigComponentProps as IRCProps } from "react-router-config";
+import { FC } from "react";
+
+const About: FC<IRCProps> = (props) =>
+    <LayoutSinglePage
+    titleEn="About Us"
+    titleZh="關於 2Ustyle"
+    {...props}
+    >
         <article>
             <h2>2Ustyle</h2>
             <p>
