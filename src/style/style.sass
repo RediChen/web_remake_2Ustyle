@@ -14,6 +14,7 @@ body
     background: $color-theme-0
     color: $color-theme-2
     font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont,'palatino', serif
+    position: relative
 
 .center
     display: flex
@@ -31,13 +32,17 @@ body
 // 箭頭用樣式 END
 //* 頁面導引樣式
 .breadcrumb
-    /* span--> (小箭頭 + 子標籤) */
-    //todo 尚未用連結寫
-    padding-bottom: 1rem
+    display: flex
+    padding-bottom: 0.5rem
+    margin-bottom: 1rem
     border-bottom: 1px solid $color-border-0
-    font-size: 0.8rem
-    span:last-child
-        color: $color-cart
+    li
+        $fz: 0.8rem
+        font-size: $fz
+        &:last-child
+            color: $color-cart
+        span
+            margin: 0 $fz/2
 // 頁面導引樣式 END
 //* 列清單樣式
 .row-ul
