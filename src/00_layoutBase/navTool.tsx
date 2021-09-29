@@ -1,5 +1,5 @@
 import LogInBtn from "src/00_commonComponents/loginBtn";
-import CartBtn from "src/00_commonComponents/cartBtn";
+import CartBtn from "src/00_commonComponents/cart/cartBtn";
 import { FC } from "react";
 const SearchBar: FC = () => {
     return (
