@@ -1,9 +1,38 @@
 import {
+    matchRoutes,
     renderRoutes,
     RouteConfigComponentProps
 } from "react-router-config";
+import { Link } from "react-router-dom";
+import routeConfig from "src/routeConfig";
+type RC = React.ComponentType<RouteConfigComponentProps>;
 
-const LayoutProd: React.ComponentType<RouteConfigComponentProps> = ({ route }) => {
+const LayoutProd: RC = ({ route, location }) => {
+    const branch = matchRoutes(routeConfig, location.pathname);
+    //matchRoutes 會將此網址所符合（經過）的所有路由，從路由之根開始，
+    // 以 array 依序條列至本身那塊。
+    // 其中攜帶的資料有二： match & route
+    const pack = branch.map(
+        (routeSegment, i) => {
+            /**
+             * 顯示以上的所有的 breadcrumb
+             */
+            const { path, breadcrumb } = routeSegment.route;
+            //從路由設定塊中抽取出 path & breadcrumb
+            let tempPath: string;
+            if (breadcrumb && typeof path === 'string') {
+                tempPath = path;
+                return (
+                    <li key={i}>
+                        <Link to={tempPath}>{breadcrumb}</Link>
+                    </li>
+                );
+            } else {
+                console.error('不接受！')
+                return null;
+            }
+        }
+    ) as JSX.Element[];
     return (
         <section id="layout-prod">
             <aside>
@@ -24,7 +53,12 @@ const LayoutProd: React.ComponentType<RouteConfigComponentProps> = ({ route }) =
                     <li>亮麗家飾．花魚共賞</li>
                 </ul>
             </aside>
-            {renderRoutes(route?.routes)}
+            <div>
+                <ol>
+                    {pack}
+                </ol>
+                {renderRoutes(route?.routes)}
+            </div>
         </section>
     );
 };
