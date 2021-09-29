@@ -1,4 +1,4 @@
-import Logo from "src/00_commonComponents/logo";
+import Logo from "src/00_commonComponents/logo/logo";
 import { FC } from "react";
 import dataNav from "./data/dataNav";
 import NavTool from "./navTool";
@@ -10,6 +10,7 @@ const NavLinks: FC = () => {
         <li className="center" id={item["titleEn"]}>
             <NavLink
                 to={item["href"]}
+                key={item["titleEn"]}
                 className="nav-link"
                 activeClassName="nav-link-active"
                 title={item["titleZh"] + " " + item["titleEn"]}>
