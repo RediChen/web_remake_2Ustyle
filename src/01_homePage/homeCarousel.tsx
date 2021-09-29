@@ -23,19 +23,24 @@ interface IProps {
     imgSrc: string;
     imgAlt: string;
 };
+/**
+ * 生成輪播圖的頁面，用 mui 的 paper 元件裝輪播圖的圖片
+ * @param props
+ * - 
+ * - imgSrc: string
+ * - imgAlt: string
+ * @returns Paper's
+ */
 const Item: FC<IProps> = (props) =>
-    /**
-     * param imgSrc: string
-     * param imgAlt: string
-     */
     <Paper elevation={6}>
         <img src={props.imgSrc} alt={props.imgAlt} />
     </Paper>
 
-const HomeCarousel = () =>
-    <Carousel>
-        {dataCarousel.map((item, i) =>
+const HomeCarousel = () => {
+    const pack = dataCarousel.map(
+        (item, i) =>
             <Item key={i} imgSrc={item.imgSrc} imgAlt={item.imgAlt} />
-        )}
-    </Carousel>
+    );
+    return <Carousel>{pack}</Carousel>
+}
 export default HomeCarousel;

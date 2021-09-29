@@ -1,6 +1,3 @@
-/**
- * 路由 map
- */
 import { Redirect } from 'react-router-dom';
 import { RouteConfig } from 'react-router-config';
 import dataNav from './00_layoutBase/data/dataNav';

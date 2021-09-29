@@ -5,6 +5,12 @@ interface ILayoutSingleProps {
     titleZh: string;
     children: ReactNode;
 }
+/**
+ * 零散頁面的共用格局
+ * @param {titleZh} 中文標題
+ * @param {titleEn} 英文標題
+ * @param {children} 單個tag
+ */
 const LayoutSinglePage: FC<ILayoutSingleProps> = (props) =>
     <div className="layout-single-page">
         <header className="center">
