@@ -2,10 +2,12 @@
 #layout-prod
     display: flex
     @include rwd-for($from: lg)
+        margin: 0 9vw
         div:last-child
             flex-grow: 1
             margin-left: 2rem
     @include rwd-for($to: lg)
+        margin: 0
         flex-direction: column-reverse
 aside
     width: 10rem
