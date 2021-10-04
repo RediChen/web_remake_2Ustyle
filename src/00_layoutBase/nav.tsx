@@ -3,17 +3,21 @@ import { FC } from "react";
 import dataNav from "./data/dataNav";
 import NavTool from "./navTool";
 import { Link, NavLink } from "react-router-dom";
+import rwdFor from "src/00_commonComponents/rwdFor";
+import { useMediaQuery } from "@material-ui/core";
+import NavMobile from "./navMobile";
 // Part I : Logo --> imported
 //* Part II : NavLinks */
 const NavLinks: FC = () => {
     const pack = dataNav.map(item =>
-        <li className="center" id={item["titleEn"]}>
+        <li className="center" id={item["titleEn"]} key={item["titleEn"]}>
             <NavLink
                 to={item["href"]}
                 key={item["titleEn"]}
                 className="nav-link"
                 activeClassName="nav-link-active"
-                title={item["titleZh"] + " " + item["titleEn"]}>
+                title={item["titleZh"] + " " + item["titleEn"]}
+            >
                 {item["titleZh"]}
             </NavLink>
         </li>
@@ -25,14 +29,26 @@ const NavLinks: FC = () => {
 // Part III : NavTool --> imported
 //* 最後組裝 */
 const Nav: FC = () => {
-    return (
-        <nav>
-            <Link to="/">
-                <Logo />
-            </Link>
-            <NavLinks />
-            <NavTool />
-        </nav>
-    );
+    const isDesktop = useMediaQuery(rwdFor('lg'));
+    if (isDesktop) {
+        return (
+            <nav>
+                <Link to="/">
+                    <Logo />
+                </Link>
+                <NavLinks />
+                <NavTool />
+            </nav>
+        );
+    } else {
+        return (
+            <nav>
+                <Link to="/">
+                    <Logo />
+                </Link>
+                <NavMobile />
+            </nav>
+        );
+    }
 }
 export default Nav;
