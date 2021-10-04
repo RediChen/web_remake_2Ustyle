@@ -1,4 +1,3 @@
-import { useMediaQuery } from "@material-ui/core";
 /**
  * @param name 尺寸代稱
  * @example xxs, xs, sm, md, lg, xl, xxl
