@@ -3,23 +3,25 @@
 // Reference: Boostrap
 $breakpoints: (
     //name 區間名稱: minimum width 區間的下界
+    //============ ┌→ mobile
     xxs: 0,
     xs: 380px,
     sm: 576px,
-    //========= ┌→ tablet
+    //==  tablet ←┐└→ mobile
     md: 768px,
-    //========= ┌→ desktop
+    //==  tablet ←┘┌→ desktop
     lg: 992px,
     xl: 1280px,
     xxl: 1536px
+    //============ └→ desktop
 ) !default;
-// 將尺寸名稱轉換成 px
+//* 將尺寸名稱轉換成 px
 @function lower-bound($size-name) {
     //回傳區間的下界 size (px)
     //若無下界，則回傳 null
     $min: map-get($breakpoints, $size-name);
     @if not $min {
-        @error "rwd 的尺寸中沒有 " + $size-name + "。";
+        @error "此 rwd 系統的尺寸中沒有 " + $size-name + "。";
     }
     @return if($min != 0, $min, null);
 }
@@ -27,7 +29,7 @@ $breakpoints: (
     // for upper-bound, 回傳區間上界的 size-name
     $i: index(map-keys($breakpoints), $size-name);
     @if not $i {
-        @error "rwd 的尺寸中沒有 " + $size-name + "。";
+        @error "此 rwd 系統的尺寸中沒有 " + $size-name + "。";
     }
     @if $i < length(map-keys($breakpoints)) {
         @return nth(map-keys($breakpoints), $i + 1);
