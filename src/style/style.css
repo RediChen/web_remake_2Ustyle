@@ -468,14 +468,14 @@ note: 須留意有些介面縱使在移動裝置
 
 #nav-mobile {
   width: 100%;
-  margin-left: -9vw;
   background-color: #9ac448;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
   bottom: 0;
 }
 
@@ -490,6 +490,9 @@ note: 須留意有些介面縱使在移動裝置
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #nav-mobile button i::before {
