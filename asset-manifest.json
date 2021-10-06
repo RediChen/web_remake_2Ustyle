@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/WD_2Ustyle_remake2108/static/css/main.ea571b51.chunk.css",
-    "main.js": "/WD_2Ustyle_remake2108/static/js/main.e5342c2f.chunk.js",
-    "main.js.map": "/WD_2Ustyle_remake2108/static/js/main.e5342c2f.chunk.js.map",
+    "main.css": "/WD_2Ustyle_remake2108/static/css/main.e3a0bfc9.chunk.css",
+    "main.js": "/WD_2Ustyle_remake2108/static/js/main.09b45543.chunk.js",
+    "main.js.map": "/WD_2Ustyle_remake2108/static/js/main.09b45543.chunk.js.map",
     "runtime-main.js": "/WD_2Ustyle_remake2108/static/js/runtime-main.448a97e9.js",
     "runtime-main.js.map": "/WD_2Ustyle_remake2108/static/js/runtime-main.448a97e9.js.map",
-    "static/js/2.ed3febfa.chunk.js": "/WD_2Ustyle_remake2108/static/js/2.ed3febfa.chunk.js",
-    "static/js/2.ed3febfa.chunk.js.map": "/WD_2Ustyle_remake2108/static/js/2.ed3febfa.chunk.js.map",
+    "static/js/2.97daf261.chunk.js": "/WD_2Ustyle_remake2108/static/js/2.97daf261.chunk.js",
+    "static/js/2.97daf261.chunk.js.map": "/WD_2Ustyle_remake2108/static/js/2.97daf261.chunk.js.map",
     "index.html": "/WD_2Ustyle_remake2108/index.html",
-    "static/css/main.ea571b51.chunk.css.map": "/WD_2Ustyle_remake2108/static/css/main.ea571b51.chunk.css.map",
-    "static/js/2.ed3febfa.chunk.js.LICENSE.txt": "/WD_2Ustyle_remake2108/static/js/2.ed3febfa.chunk.js.LICENSE.txt",
-    "static/media/carousel01.2933ae78.jpg": "/WD_2Ustyle_remake2108/static/media/carousel01.2933ae78.jpg",
+    "static/css/main.e3a0bfc9.chunk.css.map": "/WD_2Ustyle_remake2108/static/css/main.e3a0bfc9.chunk.css.map",
+    "static/js/2.97daf261.chunk.js.LICENSE.txt": "/WD_2Ustyle_remake2108/static/js/2.97daf261.chunk.js.LICENSE.txt",
+    "static/media/carousel01.f5754448.jpg": "/WD_2Ustyle_remake2108/static/media/carousel01.f5754448.jpg",
     "static/media/carousel02.1bbc5835.jpg": "/WD_2Ustyle_remake2108/static/media/carousel02.1bbc5835.jpg",
     "static/media/carousel03.c60f271b.jpg": "/WD_2Ustyle_remake2108/static/media/carousel03.c60f271b.jpg",
     "static/media/cover.6e90ef44.jpg": "/WD_2Ustyle_remake2108/static/media/cover.6e90ef44.jpg",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.448a97e9.js",
-    "static/js/2.ed3febfa.chunk.js",
-    "static/css/main.ea571b51.chunk.css",
-    "static/js/main.e5342c2f.chunk.js"
+    "static/js/2.97daf261.chunk.js",
+    "static/css/main.e3a0bfc9.chunk.css",
+    "static/js/main.09b45543.chunk.js"
   ]
 }
