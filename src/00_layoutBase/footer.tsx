@@ -15,7 +15,7 @@ const Footer = () =>
                 </ul>
             </ul>
             <ul className="row-ul">
-                <li>網站使用條款</li>
+                <li><Link to="/terms">網站使用條款</Link></li>
                 <li>隱私權政策</li>
                 <li><Link to="/disclaimer">免責聲明</Link></li>
             </ul>
