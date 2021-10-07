@@ -12,6 +12,7 @@ import GardeningTool from './10_prod/14_gardeningTools/gardening';
 import ShoppingGuide from './90_singlePage/91_shoppingGuide/shoppingGuide';
 import About from './90_singlePage/92_about/about';
 import Disclaimer from './90_singlePage/95_disclaimer/disclaimer';
+import Terms from './90_singlePage/93_terms/terms';
 
 const routeConfig: RouteConfig[] = [
     {
@@ -70,6 +71,11 @@ const routeConfig: RouteConfig[] = [
         path: '/disclaimer',
         component: Disclaimer,
         breadcrumb: '免責聲明'
+    },
+    {
+        path: '/terms',
+        component: Terms,
+        breadcrumb: '網站使用條款'
     },
     {
         path: "*",

@@ -1,3 +1,4 @@
+@use "sass:color"
 @import "../style/_rwd"
 .layout-single-page
     display: flex
@@ -35,15 +36,70 @@
             color: $color-gray-0
     article
         min-height: 70vh
+        @include rwd-for($from: lg)
+            padding: 0
+        @include rwd-for($to: lg)
+            padding: 0 5vw
+        color: $color-gray-1
+        h1
+            font-size: 1.563rem
+        h2
+            font-size: 1.25rem
         & > *
             margin-bottom: 1rem
-        & > *:not(h1)
-            color: $color-gray-1
         ul
-            $fz: 0.9rem
-            font-size: $fz
+            font-size: 0.9rem
             li
-                margin-bottom: 1rem
-                margin-left: 2*$fz
-                text-indent: -1.6rem
                 line-height: 2
+                margin-top: 0.5rem
+#logo-gallery
+    display: flex
+    @include rwd-for($from: lg)
+        justify-content: flex-start
+    @include rwd-for($to: lg)
+        justify-content: space-around
+    img
+        border-radius: 10px
+        border: 1px solid transparentize($color-theme-1, 0.5)
+        @include rwd-for($from: lg)
+            max-width: 128px
+            margin-right: 1.5rem
+        @include rwd-for($to: lg)
+            max-width: 30%
+            margin: 0
+#info-sheet
+    display: flex
+    @include rwd-for($from: lg)
+        flex-direction: row-reverse
+        justify-content: space-between
+    @include rwd-for($to: lg)
+        flex-direction: column
+    img
+        width: 300px
+        height: auto
+.terms-chap
+    margin: 1rem 0
+    & li:hover
+        background-color: #f5ffdd
+.terms-quotes
+    position: relative
+    margin: 1rem 0
+    &::before, &::after
+        @extend .font-awesome-solid
+        position: absolute
+        color: #55555555
+    &::before
+        content: '\f10d'
+        top: 0
+        left: 0
+    &::after
+        content: '\f10e'
+        bottom: 0
+        right: 0
+    & li
+        text-indent: 2rem
+    i::before
+        @extend .font-awesome-solid
+        margin-right: 1rem  
+        color: $color-gray-1
+        content: '\f068'
