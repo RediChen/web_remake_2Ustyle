@@ -7,8 +7,6 @@ const ShoppingGuide: FC<IRCProps> = (props) =>
         titleZh="購物說明"
         {...props}
     >
-        <article>
-
-        </article>
+        {/*  */}
     </LayoutSinglePage>
 export default ShoppingGuide;
