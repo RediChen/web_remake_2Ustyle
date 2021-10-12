@@ -1,4 +1,4 @@
-import ContactBox from "src/00_commonComponents/contactBox";
+import ContactBox from "src/00_commonComponents/contactBox/contactBox";
 import HomeCarousel from "./homeCarousel";
 
 const HomePage = () => {

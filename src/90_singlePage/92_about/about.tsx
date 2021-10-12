@@ -1,4 +1,4 @@
-import ContactBox from "src/00_commonComponents/contactBox";
+import ContactBox from "src/00_commonComponents/contactBox/contactBox";
 import LayoutSinglePage from "../LayoutSinglePage"
 import ListArrow from "src/00_commonComponents/listArrow/listArrow";
 import { RouteConfigComponentProps as IRCProps } from "react-router-config";
