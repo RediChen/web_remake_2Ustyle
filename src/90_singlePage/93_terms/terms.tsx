@@ -9,7 +9,7 @@ import dataTerms from "./dataTerms";
 const Terms: FC<IRCProps> = (props) => {
     return (
         <LayoutSinglePage titleZh="網站使用條款" titleEn="Terms" {...props}>
-            <h1>歡迎您使用&nbsp;2Ustyle&nbsp;網站</h1>
+            <h1>歡迎您使用 2Ustyle 網站</h1>
             {dataTerms.map(chap =>
                 <div className="terms-chap">
                     <h2>{chap.title}</h2>
