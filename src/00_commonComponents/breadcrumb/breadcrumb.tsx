@@ -3,22 +3,29 @@ import { Link } from "react-router-dom";
 import { matchRoutes } from "react-router-config";
 import { FC } from "react";
 import { Location } from 'history';
-interface IBreadcrumbsProps {
-    location: Location;
-}
-
 /**
- * 顯示此路由以上的所有的 breadcrumb，並附樣式
+ * 生成此頁面的 breadcrumbs，並附樣式。
+ * 若有子路由架構，置於其共用的岔道或頁面本檔皆可。
+ * @param location
+ * @example <Breadcrumbs location={location} />
+ * @returns &lt;ul&gt;
  */
-const Breadcrumbs: FC<IBreadcrumbsProps> = (props) => {
+const Breadcrumbs: FC<{location: Location}> = (props) => {
+    /**
+     * matchRoutes 會將此網址所符合（經過）的所有路由，
+     * 從路由之根開始，以 array 依序條列至本身那塊。
+     * @returns match & route
+     */
     const branch = matchRoutes(routeConfig, props.location.pathname);
-    //matchRoutes 會將此網址所符合（經過）的所有路由，從路由之根開始，
-    // 以 array 依序條列至本身那塊。
-    // 其中攜帶的資料有二： match & route
+    /**
+     * 將含有 breadcrumb 的路由之塊轉譯成 HTML。
+     * - 本頁標籤：有樣式，無連結
+     * - 其他標籤：無樣式，有連結
+     * @return JSX.Element[]，不符合者會成為陣列中的空格 null
+     */
     const pack = branch.map(
         (routeSegment, i) => {
             const { path, breadcrumb } = routeSegment.route;
-            //從路由設定塊中抽取出 path & breadcrumb
             const notActive = (path === props.location.pathname);
 
             if (breadcrumb && typeof path === 'string') {
@@ -26,12 +33,12 @@ const Breadcrumbs: FC<IBreadcrumbsProps> = (props) => {
                 return (
                     notActive ?
                         <li key={i}><span>&gt;</span>{breadcrumb}</li>
-                        : <li key={i}>
+                        :
+                        <li key={i}>
                             <Link to={tempPath}>&gt;{breadcrumb}</Link>
                         </li>
                 );
             } else {
-                console.error('不接受！')
                 return null;
             }
         }
