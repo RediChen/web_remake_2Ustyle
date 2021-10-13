@@ -1,19 +1,40 @@
 import { Redirect } from 'react-router-dom';
 import { RouteConfig } from 'react-router-config';
-import dataNav from './00_layoutBase/data/dataNav';
+import { IDataRouteConfig } from './interface/data-routes';
 import HomePage from './01_homePage/HomePage';
-import Login from './02_account/020_login/login';
+import dataAccountRoutes from './02_account/dataAccountRoutes'
+import MyAccount from './02_account/myAccount';
 import CartPage from './03_cart/cart';
-import Pot from './10_prod/11_pots/pot';
 import LayoutProd from './10_prod/LayoutProd';
-import Plant from './10_prod/12_plants/plant';
-import Flower from './10_prod/13_flowerpots/flowerpots';
-import GardeningTool from './10_prod/14_gardeningTools/gardening';
+import dataProdRoutes from './10_prod/dataProdRoutes'
 import ShoppingGuide from './90_singlePage/91_shoppingGuide/shoppingGuide';
 import About from './90_singlePage/92_about/about';
 import Disclaimer from './90_singlePage/95_disclaimer/disclaimer';
 import Terms from './90_singlePage/93_terms/terms';
 
+/**
+ * 為了優化此檔的版面，將各區域的子路由獨立成 data 檔，
+ * 再使用此函數展開成 config 所需的陣列。
+ * @param subConfig 獨立撰寫的路由 data
+ * @returns 可以直接放進 routes 中的陣列
+ */
+const getSubRoutes = (subConfig: IDataRouteConfig[]) => {
+    const pack = [] as RouteConfig[];
+    for (let item of subConfig) {
+        pack.push(
+            {
+                path: item["path"],
+                component: item["component"],
+                breadcrumb: item["breadcrumb"],
+                exact: item["exact"],
+            }
+        );
+    }
+    return pack;
+}
+/**
+ * 本網站的路由總組態檔
+ */
 const routeConfig: RouteConfig[] = [
     {
         path: '/',
@@ -22,9 +43,9 @@ const routeConfig: RouteConfig[] = [
         exact: true
     },
     {
-        path: '/login',
-        component: Login,
-        breadcrumb: '登入'
+        path: '/my-account',
+        component: MyAccount,
+        routes: getSubRoutes(dataAccountRoutes),
     },
     {
         path: '/cart',
@@ -34,28 +55,7 @@ const routeConfig: RouteConfig[] = [
     {
         path: '/product-category',
         component: LayoutProd,
-        routes: [
-            {
-                path: dataNav[0]["href"],
-                component: Pot,
-                breadcrumb: '盆栽'
-            },
-            {
-                path: dataNav[1]["href"],
-                component: Plant,
-                breadcrumb: '植物'
-            },
-            {
-                path: dataNav[2]["href"],
-                component: Flower,
-                breadcrumb: '花器'
-            },
-            {
-                path: dataNav[3]["href"],
-                component: GardeningTool,
-                breadcrumb: '配件'
-            }
-        ]
+        routes: getSubRoutes(dataProdRoutes),
     },
     {
         path: '/shopping-guide',
@@ -78,8 +78,8 @@ const routeConfig: RouteConfig[] = [
         breadcrumb: '網站使用條款'
     },
     {
-        path: "*",
-        component: () => <Redirect to="/" />
-    }
+        path: '*',
+        component: () => <Redirect to="/" />,
+    },
 ];
 export default routeConfig;
