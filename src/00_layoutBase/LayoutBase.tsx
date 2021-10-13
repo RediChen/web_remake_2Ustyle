@@ -5,9 +5,9 @@ import Logo from "src/00_commonComponents/logo/logo";
 import rwdFor from "src/00_commonComponents/rwdFor";
 import Footer from "./footer";
 import InfoBox from "./infoBox";
-import NavTool from "./navTool";
-import NavLinks from "./navLinks";
-import NavMobile from "./navMobile";
+import NavTool from "./nav/navTool";
+import NavLinks from "./nav/navLinks";
+import NavMobile from "./nav/navMobile";
 
 /**
  * 全站共用的介面布局
