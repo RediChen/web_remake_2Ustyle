@@ -5,21 +5,21 @@ const Login: FC = () => {
     return (
         <div className="login-page">
             <div className="login">
-                <h2>登入頁面</h2>
+                <h2>登入</h2>
                 <form action="" className="user-login">
                     <p>
                         <label htmlFor="user-email" className="form-row">
                             電子信箱
                             <span className="required">*</span>
                         </label>
-                        <input type="text" id="user-email" />
+                        <input type="text" id="user-email" required />
                     </p>
                     <p>
                         <label htmlFor="password" className="form-row">
                             密碼
                             <span className="required">*</span>
                         </label>
-                        <input type="password" id="password" />
+                        <input type="password" id="password" required />
                     </p>
                     <p>
                         <label htmlFor="remember-me">
