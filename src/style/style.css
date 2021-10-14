@@ -19,6 +19,10 @@ note: 須留意有些介面縱使在移動裝置
           box-sizing: border-box;
 }
 
+html {
+  line-height: 1.618;
+}
+
 @media screen and (min-width: 992px) {
   html {
     font-size: 21px;
@@ -63,6 +67,35 @@ button {
   border: none;
 }
 
+input[type="text"], input[type="number"],
+input[type="email"], input[type="tel"],
+input[type="url"], input[type="password"],
+input[type="search"],
+textarea {
+  font-weight: 400;
+}
+
+input[type="text"]:focus, input[type="number"]:focus,
+input[type="email"]:focus, input[type="tel"]:focus,
+input[type="url"]:focus, input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  background-color: #f4ffee;
+  outline: 2px solid #87cf4c;
+}
+
+input, select, textarea {
+  font-size: 100%;
+}
+
+.form-row {
+  display: block;
+}
+
+.required {
+  color: #e2401c;
+}
+
 .contact-box {
   margin: 5rem 0;
 }
@@ -70,7 +103,7 @@ button {
 .contact-box h1 {
   margin-bottom: 2rem;
   text-align: center;
-  color: #9ac448;
+  color: #87cf4c;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -125,7 +158,7 @@ button {
 }
 
 .home-contact-card div > *:last-child {
-  color: #9ac448;
+  color: #87cf4c;
 }
 
 .home-contact-card i {
@@ -185,7 +218,7 @@ nav {
 }
 
 #nav-link-wrap .nav-link:hover, #nav-link-wrap .nav-link-active {
-  color: #9ac448;
+  color: #87cf4c;
 }
 
 #nav-tool {
@@ -262,7 +295,7 @@ nav {
 }
 
 #nav-tool .login-btn a:link, #nav-tool .login-btn a:visited {
-  color: #9ac448;
+  color: #87cf4c;
 }
 
 #nav-tool .login-btn a:hover {
@@ -393,7 +426,7 @@ note: 須留意有些介面縱使在移動裝置
 }
 
 #footer-copyright a:hover {
-  border-color: #9ac448;
+  border-color: #87cf4c;
 }
 
 #info-box {
@@ -469,7 +502,7 @@ note: 須留意有些介面縱使在移動裝置
 #nav-mobile {
   width: 100%;
   height: 50px;
-  background-color: #9ac448;
+  background-color: #87cf4c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,8 +517,9 @@ note: 須留意有些介面縱使在移動裝置
   width: 25%;
 }
 
-#nav-mobile button {
+#nav-mobile li > button, #nav-mobile a {
   padding: 5px 0;
+  font-size: 0.8rem;
   background-color: transparent;
   color: #fffffb;
   display: -webkit-box;
@@ -500,23 +534,24 @@ note: 須留意有些介面縱使在移動裝置
           align-items: center;
 }
 
-#nav-mobile button i::before {
+#nav-mobile li > button i::before, #nav-mobile a i::before {
+  font-size: 1rem;
   margin-bottom: 3px;
 }
 
-#nav-mobile li:nth-child(1) button i::before {
+#nav-mobile li:nth-child(1) i::before {
   content: '\f879';
 }
 
-#nav-mobile li:nth-child(2) button i::before {
+#nav-mobile li:nth-child(2) i::before {
   content: '\f406';
 }
 
-#nav-mobile li:nth-child(3) button i::before {
+#nav-mobile li:nth-child(3) i::before {
   content: '\f002';
 }
 
-#nav-mobile li:nth-child(4) button i::before {
+#nav-mobile li:nth-child(4) i::before {
   content: '\f218';
 }
 
@@ -539,7 +574,7 @@ note: 須留意有些介面縱使在移動裝置
 
 #home-nav li {
   width: 25%;
-  color: #9ac448;
+  color: #87cf4c;
 }
 
 @media screen and (min-width: 768px) {
@@ -606,7 +641,7 @@ note: 須留意有些介面縱使在移動裝置
 }
 
 #home-page .Carousel-indicator-3:hover {
-  color: #9ac448;
+  color: #87cf4c;
 }
 
 #home-page .Carousel-active-5 {
@@ -638,11 +673,14 @@ note: 須留意有些介面縱使在移動裝置
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 .login-page > div {
-  border: 1px solid rgba(154, 196, 72, 0.5);
+  border: 1px solid rgba(135, 207, 76, 0.5);
   border-radius: 0.6rem;
   padding: 2rem 1rem;
 }
@@ -657,7 +695,8 @@ note: 須留意有些介面縱使在移動裝置
 @media screen and (max-width: 1279.98px) {
   .login-page > div {
     width: 80%;
-    min-height: 60vh;
+    min-height: 30vh;
+    margin-bottom: 1rem;
   }
 }
 
@@ -676,21 +715,13 @@ note: 須留意有些介面縱使在移動裝置
 }
 
 .login-page form button[type="submit"] {
-  padding: 1rem 1.2rem;
-  background-color: #9ac448;
+  padding: 0.8rem 1.2rem;
+  background-color: #87cf4c;
   color: #fffffb;
 }
 
 .login-page form.user-login p:last-child > a {
-  color: #9ac448;
-}
-
-.form-row {
-  display: block;
-}
-
-.required {
-  color: #e2401c;
+  color: #87cf4c;
 }
 
 @media screen and (min-width: 768px) {
@@ -854,7 +885,7 @@ note: 須留意有些介面縱使在移動裝置
 
 #logo-gallery img {
   border-radius: 10px;
-  border: 1px solid rgba(154, 196, 72, 0.5);
+  border: 1px solid rgba(135, 207, 76, 0.5);
 }
 
 @media screen and (min-width: 992px) {
@@ -1010,7 +1041,7 @@ aside ul li {
 }
 
 #prod-list-1 {
-  color: #9ac448;
+  color: #87cf4c;
 }
 
 #prod-list-2 {
@@ -1071,7 +1102,7 @@ body {
   border-right: 1px solid #cfd4c3;
 }
 
-.font-awesome-solid, .home-contact-card i, #nav-tool form button i::before, #info-box p i::before, #info-box button i::before, #nav-mobile button i::before, #home-nav li i::before, .terms-quotes::before, .terms-quotes::after, .terms-quotes i::before {
+.font-awesome-solid, .home-contact-card i, #nav-tool form button i::before, #info-box p i::before, #info-box button i::before, #nav-mobile li > button i::before, #nav-mobile a i::before, #home-nav li i::before, .terms-quotes::before, .terms-quotes::after, .terms-quotes i::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
