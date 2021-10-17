@@ -4,9 +4,10 @@ input[type="url"], input[type="password"],
 input[type="search"], textarea
     //padding, color
     font-weight: 400
+    caret-color: $color-theme-2
     &:focus
-        background-color: $color-theme-0
-        outline: 2px solid $color-theme-1
+        background-color: transparentize($color-theme-0, 0.8)
+        outline: 2px solid transparentize($color-theme-1, 0.5)
 
 input, select, textarea
     font-size: 100%
