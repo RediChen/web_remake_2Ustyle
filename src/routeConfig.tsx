@@ -11,6 +11,7 @@ import ShoppingGuide from './90_singlePage/91_shoppingGuide/shoppingGuide';
 import About from './90_singlePage/92_about/about';
 import Disclaimer from './90_singlePage/95_disclaimer/disclaimer';
 import Terms from './90_singlePage/93_terms/terms';
+import PrivacyPage from './90_singlePage/94_privacyPolicy/privacy';
 
 /**
  * 為了優化此檔的版面，將各區域的子路由獨立成 data 檔，
@@ -76,6 +77,11 @@ const routeConfig: RouteConfig[] = [
         path: '/terms',
         component: Terms,
         breadcrumb: '網站使用條款'
+    },
+    {
+        path: '/privacy-policy',
+        component: PrivacyPage,
+        breadcrumb: '隱私權政策'
     },
     {
         path: '*',
