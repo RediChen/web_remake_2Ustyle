@@ -72,14 +72,15 @@ input[type="email"], input[type="tel"],
 input[type="url"], input[type="password"],
 input[type="search"], textarea {
   font-weight: 400;
+  caret-color: #212e08;
 }
 
 input[type="text"]:focus, input[type="number"]:focus,
 input[type="email"]:focus, input[type="tel"]:focus,
 input[type="url"]:focus, input[type="password"]:focus,
 input[type="search"]:focus, textarea:focus {
-  background-color: #f4ffee;
-  outline: 2px solid #87cf4c;
+  background-color: rgba(244, 255, 238, 0.2);
+  outline: 2px solid rgba(135, 207, 76, 0.5);
 }
 
 input, select, textarea {
@@ -209,9 +210,6 @@ nav {
   height: 1.5rem;
   -webkit-transition: color .4s;
   transition: color .4s;
-}
-
-#nav-link-wrap .nav-link:link, #nav-link-wrap .nav-link:visited {
   color: #212e08;
 }
 
@@ -858,6 +856,8 @@ note: 須留意有些介面縱使在移動裝置
 .layout-single-page article ul li {
   line-height: 2;
   margin-top: 0.5rem;
+  margin-left: 1.9rem;
+  text-indent: -0.9rem;
 }
 
 #logo-gallery {
@@ -1100,11 +1100,17 @@ body {
   border-right: 1px solid #cfd4c3;
 }
 
-.font-awesome-solid, .home-contact-card i, #nav-tool form button i::before, #info-box p i::before, #info-box button i::before, #nav-mobile li > button i::before, #nav-mobile a i::before, #home-nav li i::before, .terms-quotes::before, .terms-quotes::after, .terms-quotes i::before {
+.font-awesome-solid, .home-contact-card i, #nav-tool form button i::before, #info-box p i::before, #info-box button i::before, #nav-mobile li > button i::before, #nav-mobile a i::before, #home-nav li i::before, .terms-quotes::before, .terms-quotes::after, .terms-quotes i::before, .chevron-right::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+
+.chevron-right::before {
+  content: '\f054';
+  color: #87cf4c;
+  margin-right: 1rem;
 }
