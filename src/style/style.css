@@ -70,16 +70,14 @@ button {
 input[type="text"], input[type="number"],
 input[type="email"], input[type="tel"],
 input[type="url"], input[type="password"],
-input[type="search"],
-textarea {
+input[type="search"], textarea {
   font-weight: 400;
 }
 
 input[type="text"]:focus, input[type="number"]:focus,
 input[type="email"]:focus, input[type="tel"]:focus,
 input[type="url"]:focus, input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
+input[type="search"]:focus, textarea:focus {
   background-color: #f4ffee;
   outline: 2px solid #87cf4c;
 }
@@ -521,7 +519,7 @@ note: 須留意有些介面縱使在移動裝置
   padding: 5px 0;
   font-size: 0.8rem;
   background-color: transparent;
-  color: #fffffb;
+  color: #f4ffee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -717,7 +715,7 @@ note: 須留意有些介面縱使在移動裝置
 .login-page form button[type="submit"] {
   padding: 0.8rem 1.2rem;
   background-color: #87cf4c;
-  color: #fffffb;
+  color: #f4ffee;
 }
 
 .login-page form.user-login p:last-child > a {
