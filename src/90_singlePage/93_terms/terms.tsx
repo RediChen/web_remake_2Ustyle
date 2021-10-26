@@ -1,11 +1,9 @@
 import { FC } from "react";
 import { RouteConfigComponentProps as IRCProps } from "react-router-config";
 import LayoutSinglePage from "../LayoutSinglePage";
-import ListArrow from "src/00_commonComponents/listArrow/listArrow";
 import dataTerms from "./dataTerms";
-// const listOutput = (items: string[]): JSX.Element[] => {
+import ListGreenArrow from "src/00_commonComponents/listGreenArrow/listGreenArrow";
 
-// }
 const Terms: FC<IRCProps> = (props) => {
     return (
         <LayoutSinglePage titleZh="網站使用條款" titleEn="Terms" {...props}>
@@ -13,28 +11,18 @@ const Terms: FC<IRCProps> = (props) => {
             {dataTerms.map(chap =>
                 <div className="terms-chap">
                     <h2>{chap.title}</h2>
-                    <ul>
-                        {chap.items.map(item =>
-                            <li>
-                                <ListArrow />{item}
-                            </li>
-                        )}
-                    </ul>
+                    <ListGreenArrow items={chap.items} />
                     {chap.quotes ?
                         <div className="terms-quotes">
                             <ul>
-                                {chap.quotes.map(item =>
-                                    <li>
-                                        <i />{item}
-                                    </li>
-                                )}
+                                {chap.quotes.map(item => <li><i />{item}</li>)}
                             </ul>
                         </div>
                         : <></>
                     }
                 </div>
             )}
-            <h1>本同意書若有未盡之處，依中華民國法律解釋、補充及辦理。</h1>
+            <h2>本同意書若有未盡之處，依中華民國法律解釋、補充及辦理。</h2>
         </LayoutSinglePage>
     );
 }

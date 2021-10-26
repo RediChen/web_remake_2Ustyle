@@ -47,11 +47,6 @@
             font-size: 1.25rem
         & > *
             margin-bottom: 1rem
-        ul
-            font-size: 0.9rem
-            li
-                line-height: 2
-                margin-top: 0.5rem
 #logo-gallery
     display: flex
     @include rwd-for($from: lg)
@@ -96,8 +91,13 @@
         content: '\f10e'
         bottom: 0
         right: 0
-    & li
-        text-indent: 2rem
+    ul
+        margin: 0 auto
+        width: 80%
+        li
+            font-size: 0.9rem
+            margin-left: 3rem
+            text-indent: -1rem
     i::before
         @extend .font-awesome-solid
         margin-right: 1rem  

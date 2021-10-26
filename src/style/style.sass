@@ -46,6 +46,13 @@ body
     li:not(:last-child),div:not(:last-child)
         border-right: 1px solid $color-border-0
 // 列清樣式 END
+.green-arrow-list
+    $fz : 0.9rem
+    font-size: $fz
+    li
+        margin-top: 1rem
+        margin-left: $fz + 1rem
+        text-indent: -$fz
 //* Icon from font Awesome
 .font-awesome-solid
     display: inline-block
@@ -54,9 +61,12 @@ body
     text-rendering: auto
     font-family: "Font Awesome 5 Free"
     font-weight: 900
+    line-height: initial
 // Icon from font Awesome END
+//* 元件：listGreenArrow
 .chevron-right::before
     @extend .font-awesome-solid
     content: '\f054'
     color: $color-theme-1
     margin-right: 1rem
+// 元件：listGreenArrow END
