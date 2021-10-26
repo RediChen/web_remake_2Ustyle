@@ -691,6 +691,12 @@ note: 須留意有些介面縱使在移動裝置
   padding: 2rem 1rem;
 }
 
+.login-page > div:hover {
+  outline: 1px solid #87cf4c;
+  -webkit-box-shadow: 0 0 20px 5px rgba(135, 207, 76, 0.1) inset;
+          box-shadow: 0 0 20px 5px rgba(135, 207, 76, 0.1) inset;
+}
+
 @media screen and (min-width: 992px) {
   .login-page > div {
     width: 40%;
