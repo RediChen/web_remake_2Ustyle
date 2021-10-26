@@ -16,6 +16,10 @@ const breakpoints = {
     //============ └→ desktop
 } as { [name: string]: number };
 //================================================================
+//* 合法尺寸檢驗器 */
+const notValid = (name: string) =>
+    (Object.keys(breakpoints).indexOf(name) === -1) ? true : false;
+//================================================================
 //* 將尺寸代稱轉換 px */
 /**
  * @param sizeName 尺寸代稱
@@ -52,53 +56,68 @@ const nextBreakpoint = (sizeName: string) => {
 //================================================================
 //* 錯誤訊息罐頭 */
 const noSizeError: (sizeName: string) => Error = (sizeName) => {
-    throw new Error("不要瞎掰好嗎，本 RWD 系統沒有 " + sizeName + " 這種尺寸。");
+    throw new Error("不要瞎掰好嗎！本 RWD 系統沒有 " + sizeName + " 這種尺寸。");
 };
 const allSizeWarn = "全尺寸的範圍沒有使用 RWD 的必要。";
 //================================================================
-//* 使用 media query */
-const rwdUpFrom = (sizeName?: string) => {
-    if (sizeName) {
-        const size = getLowerBound(sizeName);
+//* API */
+/**
+ * 輸入所需範圍的尺寸代號，會生成 useMediaQuery 用的參數
+ * @param from 最小的尺寸代號
+ * @example xxs, xs, sm, md, lg, xl, xxl
+ * @returns useMediaQuery 用的參數 : string
+ */
+const rwdFrom = (from: string) => {
+    if (notValid(from)) {
+        noSizeError(from);
+        return "";
+    } else if (from === "xxs") {
+        console.warn(allSizeWarn);
+        return "";
+    } else {
+        const size = getLowerBound(from);
         return "(min-width: " + size + "px)";
-    } else {
-        console.warn(allSizeWarn);
-        return "";
     }
 }
-const rwdDownFrom = (sizeName?: string) => {
-    if (sizeName) {
-        const size = getUpperBound(sizeName);
+/**
+ * 輸入所需範圍的尺寸代號，會生成 useMediaQuery 用的參數
+ * @param to 最大的尺寸代號
+ * @example xxs, xs, sm, md, lg, xl, xxl
+ * @returns useMediaQuery 用的參數 : string
+ */
+const rwdTo = (to: string) => {
+    if (notValid(to)) {
+        noSizeError(to);
+        return "";
+    } else if (to === "xxl") {
+        console.warn(allSizeWarn);
+        return "";
+    } else {
+        const size = getUpperBound(to);
         return "(max-width: " + size + "px)";
-    } else {
-        console.warn(allSizeWarn);
-        return "";
     }
 }
+/**
+ * 輸入所需範圍的尺寸代號，會生成 useMediaQuery 用的參數
+ * @param from 最小的尺寸代號
+ * @param to 最大的尺寸代號
+ * @example xxs, xs, sm, md, lg, xl, xxl
+ * @returns useMediaQuery 用的參數 : string
+ */
 const rwdBetween = (from: string, to: string) => {
-    const sizeFrom = rwdUpFrom(from);
-    const sizeTo = rwdDownFrom(to);
-    const condition1 = "(min-width: " + sizeFrom + "px)";
-    const condition2 = "and (max-width: " + sizeTo + "px)";
-    return condition1 + condition2;
+    if (notValid(from) && notValid(to)) {
+        throw new Error("請務必使用本 RWD 系統的尺寸代號。");
+    } else if (notValid(from) || from === "xxs") {
+        return rwdTo(to);
+    } else if (notValid(to) || to === "xxl") {
+        return rwdFrom(from);
+    } else {
+        const sizeFrom = rwdFrom(from);
+        const sizeTo = rwdTo(to);
+        const condition1 = "(min-width: " + sizeFrom + "px)";
+        const condition2 = "and (max-width: " + sizeTo + "px)";
+        return condition1 + condition2;
+    }
 }
 //================================================================
-//* API */
-interface IRwdFunc {
-    (
-        from?: string | undefined,
-        to?: string | undefined
-    ): string;
-}
-const rwdFor: IRwdFunc = (from?, to?) => {
-    if (from === undefined && to === undefined) {
-        throw new Error("請務必使用 from 或 to 輸入尺寸範圍。");
-    } else if (from === undefined || from === "xxs") {
-        return rwdDownFrom(to);
-    } else if (to === undefined || to === "xxl") {
-        return rwdUpFrom(from);
-    } else {
-        return rwdBetween(from, to);
-    }
-};
-export default rwdFor;
+export { rwdTo, rwdFrom, rwdBetween };
