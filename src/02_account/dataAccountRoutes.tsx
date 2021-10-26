@@ -12,7 +12,6 @@ const dataAccountRoutes: IDataRouteConfig[] = [
     },
     {
         path: "/my-account/lost-password",
-        exact: true,
         breadcrumb: "重設密碼",
         component: LostPassword,
     },

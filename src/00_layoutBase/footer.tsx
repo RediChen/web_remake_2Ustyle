@@ -20,7 +20,6 @@ const Footer = () =>
                 <li><Link to="/disclaimer">免責聲明</Link></li>
             </ul>
             <ul className="row-ul">
-                <li>網站維護</li>
                 <li>
                     <a href="https://www.2ustyle.com" target="_blank"
                         title="2Ustyle官方網站" rel="noreferrer">

@@ -16,8 +16,8 @@ import NavMobile from "./nav/navMobile";
  */
 const LayoutBase: FC = ({ children }) => {
     const isDesktop = useMediaQuery(rwdFor('lg'));
-    if (isDesktop) {
-        return (
+    return (
+        isDesktop ?
             <>
                 <nav>
                     <Link to="/">
@@ -30,9 +30,7 @@ const LayoutBase: FC = ({ children }) => {
                 <Footer />
                 <InfoBox />
             </>
-        );
-    } else {
-        return (
+            :
             <>
                 <div>
                     <Link to="/">
@@ -44,7 +42,6 @@ const LayoutBase: FC = ({ children }) => {
                 <InfoBox />
                 <NavMobile />
             </>
-        );
-    }
+    );
 }
 export default LayoutBase;
