@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@material-ui/core";
 import Logo from "src/00_commonComponents/logo/logo";
-import rwdFor from "src/00_commonComponents/rwdFor";
+import { rwdFrom } from "src/00_commonComponents/rwdFor";
 import Footer from "./footer";
 import InfoBox from "./infoBox";
 import NavTool from "./nav/navTool";
@@ -15,7 +15,7 @@ import NavMobile from "./nav/navMobile";
  * @param children 頁面內容
  */
 const LayoutBase: FC = ({ children }) => {
-    const isDesktop = useMediaQuery(rwdFor('lg'));
+    const isDesktop = useMediaQuery(rwdFrom('lg'));
     return (
         isDesktop ?
             <>
