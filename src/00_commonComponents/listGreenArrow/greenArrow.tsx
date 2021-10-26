@@ -1,5 +1,5 @@
 import { FC } from "react";
 
-const ListArrow: FC = () =>
+const GreenArrow: FC = () =>
     <i className="chevron-right"></i>
-export default ListArrow;
+export default GreenArrow;

@@ -1,6 +1,6 @@
 import ContactBox from "src/00_commonComponents/contactBox/contactBox";
 import LayoutSinglePage from "../LayoutSinglePage"
-import ListArrow from "src/00_commonComponents/listArrow/listArrow";
+import GreenArrow from "src/00_commonComponents/listGreenArrow/greenArrow";
 import { RouteConfigComponentProps as IRCProps } from "react-router-config";
 import { FC } from "react";
 import logoConcept1 from './images/logoConcept1.jpg';
@@ -36,8 +36,8 @@ const About: FC<IRCProps> = (props) =>
         <p className="highlight">我們堅持，從微笑出發是專屬您的生活「風格」，忙碌之餘更要「圖」個「悠」閒。</p>
         <p>我們建立了友善的盆栽線上購物平台，讓消費者在工作、居家兩頭忙碌之餘，能夠輕鬆地選購舒壓小品、療鬱盆栽及各式空氣淨化植物，也讓消費者在購買花卉園藝相關商品的同時，能享有品牌的貼心服務。</p>
         <ul>
-            <li><ListArrow />針對新手，首創套餐式的<b>「盆栽簡單購」</b>，幫助消費者排除難以在網路上選購盆栽的障礙。</li>
-            <li><ListArrow />針對常客，進一步推出創新的線上<b>「花器自由配」</b>，讓消費者可以隨心所欲的幫植物穿搭。</li>
+            <li><GreenArrow />針對新手，首創套餐式的<b>「盆栽簡單購」</b>，幫助消費者排除難以在網路上選購盆栽的障礙。</li>
+            <li><GreenArrow />針對常客，進一步推出創新的線上<b>「花器自由配」</b>，讓消費者可以隨心所欲的幫植物穿搭。</li>
         </ul>
         <p>我們還整合了植物安心宅配技術、快速到貨的物流服務，以及專業客服提供盆栽照顧的售後服務。</p>
         <br />
