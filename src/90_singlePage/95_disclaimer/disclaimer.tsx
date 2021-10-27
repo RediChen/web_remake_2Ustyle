@@ -1,7 +1,6 @@
 import LayoutSinglePage from "../LayoutSinglePage";
 import { RouteConfigComponentProps as IRCProps } from "react-router-config";
 import { FC } from "react";
-import ListArrow from "src/00_commonComponents/listGreenArrow/greenArrow";
 import ListGreenArrow from "src/00_commonComponents/listGreenArrow/listGreenArrow";
 const Disclaimer: FC<IRCProps> = (props) => {
     const dataList = [
