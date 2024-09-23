@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/WD_2Ustyle_remake2108/static/css/main.121f64f7.chunk.css",
-    "main.js": "/WD_2Ustyle_remake2108/static/js/main.a27fc8da.chunk.js",
-    "main.js.map": "/WD_2Ustyle_remake2108/static/js/main.a27fc8da.chunk.js.map",
-    "runtime-main.js": "/WD_2Ustyle_remake2108/static/js/runtime-main.448a97e9.js",
-    "runtime-main.js.map": "/WD_2Ustyle_remake2108/static/js/runtime-main.448a97e9.js.map",
-    "static/js/2.d63df2d1.chunk.js": "/WD_2Ustyle_remake2108/static/js/2.d63df2d1.chunk.js",
-    "static/js/2.d63df2d1.chunk.js.map": "/WD_2Ustyle_remake2108/static/js/2.d63df2d1.chunk.js.map",
-    "index.html": "/WD_2Ustyle_remake2108/index.html",
-    "static/css/main.121f64f7.chunk.css.map": "/WD_2Ustyle_remake2108/static/css/main.121f64f7.chunk.css.map",
-    "static/js/2.d63df2d1.chunk.js.LICENSE.txt": "/WD_2Ustyle_remake2108/static/js/2.d63df2d1.chunk.js.LICENSE.txt",
-    "static/media/carousel01.f5754448.jpg": "/WD_2Ustyle_remake2108/static/media/carousel01.f5754448.jpg",
-    "static/media/carousel02.1bbc5835.jpg": "/WD_2Ustyle_remake2108/static/media/carousel02.1bbc5835.jpg",
-    "static/media/carousel03.c60f271b.jpg": "/WD_2Ustyle_remake2108/static/media/carousel03.c60f271b.jpg",
-    "static/media/cover.6e90ef44.jpg": "/WD_2Ustyle_remake2108/static/media/cover.6e90ef44.jpg",
-    "static/media/cover.6fca64d8.jpg": "/WD_2Ustyle_remake2108/static/media/cover.6fca64d8.jpg",
-    "static/media/cover.a2e1e495.jpg": "/WD_2Ustyle_remake2108/static/media/cover.a2e1e495.jpg",
-    "static/media/cover.ce68bc4c.jpg": "/WD_2Ustyle_remake2108/static/media/cover.ce68bc4c.jpg",
-    "static/media/logoBlock.f69bd9a1.jpg": "/WD_2Ustyle_remake2108/static/media/logoBlock.f69bd9a1.jpg"
+    "main.css": "/web_remake_2Ustyle/static/css/main.121f64f7.chunk.css",
+    "main.js": "/web_remake_2Ustyle/static/js/main.50431c4b.chunk.js",
+    "main.js.map": "/web_remake_2Ustyle/static/js/main.50431c4b.chunk.js.map",
+    "runtime-main.js": "/web_remake_2Ustyle/static/js/runtime-main.3a938c99.js",
+    "runtime-main.js.map": "/web_remake_2Ustyle/static/js/runtime-main.3a938c99.js.map",
+    "static/js/2.842e5528.chunk.js": "/web_remake_2Ustyle/static/js/2.842e5528.chunk.js",
+    "static/js/2.842e5528.chunk.js.map": "/web_remake_2Ustyle/static/js/2.842e5528.chunk.js.map",
+    "index.html": "/web_remake_2Ustyle/index.html",
+    "static/css/main.121f64f7.chunk.css.map": "/web_remake_2Ustyle/static/css/main.121f64f7.chunk.css.map",
+    "static/js/2.842e5528.chunk.js.LICENSE.txt": "/web_remake_2Ustyle/static/js/2.842e5528.chunk.js.LICENSE.txt",
+    "static/media/carousel01.f5754448.jpg": "/web_remake_2Ustyle/static/media/carousel01.f5754448.jpg",
+    "static/media/carousel02.1bbc5835.jpg": "/web_remake_2Ustyle/static/media/carousel02.1bbc5835.jpg",
+    "static/media/carousel03.c60f271b.jpg": "/web_remake_2Ustyle/static/media/carousel03.c60f271b.jpg",
+    "static/media/cover.6e90ef44.jpg": "/web_remake_2Ustyle/static/media/cover.6e90ef44.jpg",
+    "static/media/cover.6fca64d8.jpg": "/web_remake_2Ustyle/static/media/cover.6fca64d8.jpg",
+    "static/media/cover.a2e1e495.jpg": "/web_remake_2Ustyle/static/media/cover.a2e1e495.jpg",
+    "static/media/cover.ce68bc4c.jpg": "/web_remake_2Ustyle/static/media/cover.ce68bc4c.jpg",
+    "static/media/logoBlock.f69bd9a1.jpg": "/web_remake_2Ustyle/static/media/logoBlock.f69bd9a1.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.448a97e9.js",
-    "static/js/2.d63df2d1.chunk.js",
+    "static/js/runtime-main.3a938c99.js",
+    "static/js/2.842e5528.chunk.js",
     "static/css/main.121f64f7.chunk.css",
-    "static/js/main.a27fc8da.chunk.js"
+    "static/js/main.50431c4b.chunk.js"
   ]
 }
